@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EEDE614-B28A-8ABD-4C20-F0DD3AED060A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityBuildTarget>StandaloneOSXIntel64:27</UnityBuildTarget>
+    <UnityVersion>2017.1.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_MODULAR_UNITYENGINE_ASSEMBLIES;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_MODULAR_UNITYENGINE_ASSEMBLIES;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Library/ScriptAssemblies/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Utage Test.csproj">
+      <Project>{6D3B60AC-C458-E07E-1D9E-75AE2AB4CFBB}</Project>
+      <Name>Utage Test</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Utage\Editor\Scripts\CustomCreateAsset.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Inspector\AdvEngineStarterInspector.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Inspector\AssetFileManagerInspector.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Inspector\DicingTexturePacker.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Inspector\DicingTexturesInspcetor.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Inspector\LetterBoxCameraInspector.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\AssetDataBaseEx.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\AssetInfo.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\MainAssetInfo.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\SubAssetInfo.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Helper\MonoScriptHelper.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Helper\SerializeHelper.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Util\EdtiorToolKit.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Util\ExcelParser.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Util\PostProcessEditorSceneChanged.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\CustomEditorWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\OptimizedScrollView.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\TestCustomEditorWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\AboutUtage.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Checker\AdvBuildChecker.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Checker\AdvEditorSettingWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Checker\AdvSceneChecker.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Converter\AdvExcelCsvConverter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Converter\AdvFileListConverter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Converter\AdvResourcesConverter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Converter\DicingConverter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\CreateNewProjectWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\MenuTool.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Project\AdvExcelImporter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Project\AdvScenarioDataBuilderWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Project\AdvScenarioDataProject.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Project\ResourceImporter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\AdvExcelLocalizeConverter.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\AdvExcelLocalizeMerger.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\DeepDuplicator.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\FontChanger.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\GuiStyleSample.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\ReferenceAssetChanger.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\ScriptCleanerWindow.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\SelectableColorChanger.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Viewer\AdvFileManagerViewer.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Viewer\AdvParamViewer.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Menu\Viewer\AdvScenarioViewer.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Testing\NewPlayModeTestMonoBehaviour.cs" />
+    <Compile Include="Assets\Utage\Editor\Scripts\Testing\UtageEditorTest.cs" />
+    <Compile Include="Assets\Utage\Scripts\GameLib\UI\Image\Avatar\Editor\AvatarDataInspector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Utage\Editor\NPOI\Read Me.txt" />
+    <None Include="Assets\Utage\Editor\NPOI\Release Notes.txt" />
+    <None Include="Assets\Utage\Editor\NPOI\dotnet2\NPOI.OOXML.XML" />
+    <None Include="Assets\Utage\Editor\NPOI\dotnet2\NPOI.OpenXml4Net.XML" />
+    <None Include="Assets\Utage\Editor\NPOI\dotnet2\NPOI.XML" />
+    <None Include="Assets\Utage\LocalizeText\AdvErrorMsg.txt" />
+    <None Include="Assets\Utage\LocalizeText\ErrorMsg.txt" />
+    <None Include="Assets\Utage\LocalizeText\ExampleText.txt" />
+    <None Include="Assets\Utage\LocalizeText\SystemText.txt" />
+    <None Include="Assets\Utage\ReadMe.txt" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\CrossFade\Utage-CrossFadeImage.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\GrabPass\Utage-GrabPass-Mosaic.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Bloom.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Blur.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-ColorFade.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Fisheye.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Grayscale.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Mosaic.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-MotionBlur.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-NegaPosi.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Sepiatone.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Twirl.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Vortex.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-DrawByRenderTexture.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-RenderTexture.shader" />
+    <None Include="Assets\Utage\Resources\Utage-Shader\RuleFade\Utage-UI-RuleFade.shader" />
+    <None Include="Assets\Utage\Sample\ParticleExamples\SurfaceShader_VC.shader" />
+    <None Include="Assets\Utage\Sample\ReadMe.txt" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaMain.cginc" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaOutline.cginc" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaSkin.cginc" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\readme.txt" />
+    <None Include="Assets\Utage\Scripts\GameLib\iTween\Plugins\ReadMe!\ReadMe!.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
