@@ -93,6 +93,7 @@
      <Compile Include="Assets\Utage\Editor\Scripts\Testing\UtageEditorTest.cs" />
      <Compile Include="Assets\Utage\Scripts\GameLib\UI\Image\Avatar\Editor\AvatarDataInspector.cs" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Blur.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\RuleFade\Utage-UI-RuleFade.shader" />
@@ -123,6 +124,7 @@
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Mosaic.shader" />
      <None Include="Assets\Utage\Scripts\GameLib\iTween\Plugins\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaOutline.cginc" />
+     <None Include="Assets\MyProject\Scenes\Scripts\UniRx\ReadMe.txt" />
      <None Include="Assets\Utage\ReadMe.txt" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
@@ -179,6 +181,12 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/user/Desktop/SugiyamaSanData/yakiniku/Utage Test/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>/Users/user/Desktop/SugiyamaSanData/yakiniku/Utage Test/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
  <HintPath>/Users/user/Desktop/SugiyamaSanData/yakiniku/Utage Test/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
