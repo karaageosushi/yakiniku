@@ -33,19 +33,11 @@ public class MusicSelectScene : BaseScene {
 	}
 
 	void UpdateItemList(){
+		
 		mItemLsit.ForEach (i => Destroy (i.gameObject));
 		mItemLsit.Clear();
-		List<CharacterType> chaList = new List<CharacterType>() ;
-		//バグで落ちてるので調べる！！！！
-
-		Debug.LogError ("バグで落ちてるので調べる！！！！");
-		/*
-		foreach (var item in GameSystemManager.Instance.UserData.mCharaSaveDataList) {
-			chaList.Add (item.CharacterType);
-		}
-		*/
-		Debug.Log ("11"+chaList.Count);
-		foreach (var chara in chaList) {
+		var charaList = GameSystemManager.Instance.UserData.mCharaSaveDataList.Select(cs=>cs.CharacterType).ToList();
+		foreach (var chara in charaList) {
 			var item = PrefabFolder.InstantiateTo<MusicItem> (CharaMusicItemPrefab,mGrid.transform);
 			item.Init (chara,()=>{
 				OpenEpisodeDialog();
@@ -54,6 +46,7 @@ public class MusicSelectScene : BaseScene {
 				mMainScene.UpdateMainDisplay();
 			}
 			);
+			mItemLsit.Add (item);
 		}
 
 

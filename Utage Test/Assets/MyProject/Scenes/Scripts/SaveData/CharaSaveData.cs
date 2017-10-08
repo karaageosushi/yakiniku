@@ -20,7 +20,7 @@ public class CharaSaveData  {
 
 	public CharacterType CharacterType{
 		get{
-			return (CharacterType)CharacterType;
+			return (CharacterType)mCharacterType;
 		}
 	}
 

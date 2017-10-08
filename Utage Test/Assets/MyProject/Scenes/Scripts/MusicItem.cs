@@ -19,7 +19,7 @@ public class MusicItem : MonoBehaviour {
 		mCharacterType = chara;
 		mOnClickEpisodeButtonCallBack = onClickEpisodeButtonCallBack;
 		mOnCharaSelectButtonCallBack = onCharaSelectButtonCallBack;
-		mCharaNameLabel.text = CharacterData.CharacterDict[chara];
+		mCharaNameLabel.text = CharacterMasterData.CharacterDict[chara];
 	}
 
 	/// <summary>

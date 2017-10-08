@@ -2465,7 +2465,7 @@ MonoBehaviour:
   mMusicSelectScene: {fileID: 1605405122}
   mSettingScene: {fileID: 1772828255}
   mCharacterImageSelector: {fileID: 292955401}
-  mDegreeLoveLabel: {fileID: 2143091508}
+  mLovePointLabel: {fileID: 2143091508}
   mCharaNameLabel: {fileID: 1688424035}
   mCharaCommentLabel: {fileID: 458553498}
   mTimeLabel: {fileID: 2143934175}

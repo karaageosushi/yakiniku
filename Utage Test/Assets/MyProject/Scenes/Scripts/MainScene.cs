@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class MainScene : MonoBehaviour {
 	[SerializeField]
@@ -12,7 +13,7 @@ public class MainScene : MonoBehaviour {
 	CharacterImageSelector mCharacterImageSelector;
 
 	[SerializeField]
-	Text mDegreeLoveLabel;
+	Text mLovePointLabel;
 	[SerializeField]
 	Text mCharaNameLabel;
 	[SerializeField]
@@ -28,11 +29,7 @@ public class MainScene : MonoBehaviour {
 	}
 
 	void Start () {
-		//GameSystemManager.Instance.SetEarlyUserData ();
-		//UpdateMainDisplay ();
-
-		//Test!!!!!!!
-		Invoke("SetEarlyUserData",0.1f);
+		UpdateMainDisplay ();
 	}
 
 	/// <summary>
@@ -41,12 +38,12 @@ public class MainScene : MonoBehaviour {
 	public void UpdateMainDisplay(){
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
 		mCharacterImageSelector.ShowCharactor (selectChara);
-		mCharaNameLabel.text = CharacterData.CharacterDict[selectChara];
-	}
-
-	[ContextMenu("デバッグで画面情報を構築")]
-	void SetEarlyUserData(){
-		GameSystemManager.Instance.SetEarlyUserData ();
-		UpdateMainDisplay ();
+		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara];
+		mLovePointLabel.text = "×"+GameSystemManager.Instance.UserData.mSelectedCharaSaveData.mLovePoint;
+		//現在のキャラクターのコメントを取得
+		var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mTime == TimeUtil.GetCurrentTimeType()).ToList();
+		int rand = UnityEngine.Random.Range (0,currentCharaCommentList.Count);
+		string comment = currentCharaCommentList[rand].mComment;
+		mCharaCommentLabel.text = comment;
 	}
 }
