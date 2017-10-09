@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using DG.Tweening;
+using SoundUtil;
 
 public class BaseScene : MonoBehaviour {
 
@@ -25,6 +26,9 @@ public class BaseScene : MonoBehaviour {
 			Debug.Log ("OnCompleteOpen:"+this.gameObject.name);
 			mOpenCallback();
 		}).SetEase(Ease.InOutQuad);
+
+		SoundManager.Instance.PlaySe (0);
+
 	}
 
 	public void Close(Action closeCallBack = null){
@@ -38,6 +42,9 @@ public class BaseScene : MonoBehaviour {
 			Debug.Log ("OnCompleteClose:"+this.gameObject.name);
 			mCloseCallback();
 		}).SetEase(Ease.InOutQuad);
+
+		SoundManager.Instance.PlaySe (1);
+
 	}
 
 	public virtual void Close(){
