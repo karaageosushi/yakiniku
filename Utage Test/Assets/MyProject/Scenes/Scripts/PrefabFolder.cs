@@ -17,4 +17,13 @@ public class PrefabFolder {
 		script.transform.localPosition = Vector3.zero;
 		return script;
 	}
+	public static T ResourcesLoadInstantiateTo<T>(string path,Transform parent)where T : Component{
+
+		var obj = (GameObject)Resources.Load (path);
+		var script = Object.Instantiate(obj).GetComponent<T>();
+		//script.transform.parent = parent;
+		script.transform.SetParent (parent);
+		script.transform.localPosition = Vector3.zero;
+		return script;
+	}
 }

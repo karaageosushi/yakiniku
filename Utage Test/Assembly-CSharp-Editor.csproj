@@ -101,8 +101,10 @@
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-NegaPosi.shader" />
      <None Include="Assets\Utage\Sample\ParticleExamples\SurfaceShader_VC.shader" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\readme.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme_ja.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-MotionBlur.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Bloom.shader" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Fisheye.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Vortex.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-RenderTexture.shader" />
@@ -126,9 +128,11 @@
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaOutline.cginc" />
      <None Include="Assets\MyProject\Scenes\Scripts\UniRx\ReadMe.txt" />
      <None Include="Assets\Utage\ReadMe.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme.txt" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\Utage\Editor\NPOI\Read Me.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme_ja.txt" />
      <None Include="Assets\Utage\LocalizeText\ErrorMsg.txt" />
      <None Include="Assets\Utage\LocalizeText\AdvErrorMsg.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\GrabPass\Utage-GrabPass-Mosaic.shader" />
@@ -223,6 +227,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{91E5B3DF-85CD-F548-1E43-BC781280A215}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2CBCAC19-282B-67B6-CB5F-F0F48232C503}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

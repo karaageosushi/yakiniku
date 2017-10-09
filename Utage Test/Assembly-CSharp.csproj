@@ -50,6 +50,7 @@
      <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BaseScene.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\CharaSettingData.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\CharacterImageSelector.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\DialogBase.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\EpisodeItem.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\MyProject\Scenes\Scripts\ScneManagerBase.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\SettingScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\SingletonMonoBehaviour.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\SoundManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\UniRx\Examples\Sample01_ObservableWWW.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\UniRx\Examples\Sample02_ObservableTriggers.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\UniRx\Examples\Sample03_GameObjectAsObservable.cs" />
@@ -808,8 +810,10 @@
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-NegaPosi.shader" />
      <None Include="Assets\Utage\Sample\ParticleExamples\SurfaceShader_VC.shader" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\readme.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme_ja.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-MotionBlur.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Bloom.shader" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Fisheye.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Vortex.shader" />
      <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-RenderTexture.shader" />
@@ -833,9 +837,11 @@
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaOutline.cginc" />
      <None Include="Assets\MyProject\Scenes\Scripts\UniRx\ReadMe.txt" />
      <None Include="Assets\Utage\ReadMe.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme.txt" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\Utage\Editor\NPOI\Read Me.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme_ja.txt" />
      <None Include="Assets\Utage\LocalizeText\ErrorMsg.txt" />
      <None Include="Assets\Utage\LocalizeText\AdvErrorMsg.txt" />
      <None Include="Assets\Utage\Resources\Utage-Shader\GrabPass\Utage-GrabPass-Mosaic.shader" />
@@ -862,6 +868,10 @@
  <Reference Include="DOTween">
  <HintPath>/Users/user/Desktop/SugiyamaSanData/yakiniku/Utage Test/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{91E5B3DF-85CD-F548-1E43-BC781280A215}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

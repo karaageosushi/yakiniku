@@ -24,6 +24,11 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 	private AudioClip[] seClips;
 	[SerializeField]
 	private AudioClip[] bgmClips;
+		public AudioClip[] BgmClips{
+			get{
+				return bgmClips;
+			}
+		}
 
 	private Dictionary<string,int> seIndexes = new Dictionary<string,int>();
 	private Dictionary<string,int> bgmIndexes = new Dictionary<string,int>();

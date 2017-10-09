@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using SoundUtil;
 
 public class MusicItem : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class MusicItem : MonoBehaviour {
 	Text mCharaNameLabel;
 	[SerializeField]
 	Text mMusicTimeLabel;
+	[SerializeField]
+	Button mCharaSelectButton;
 
 
 	public void Init(CharacterType chara,Action onClickEpisodeButtonCallBack,Action onCharaSelectButtonCallBack){
@@ -20,6 +23,10 @@ public class MusicItem : MonoBehaviour {
 		mOnClickEpisodeButtonCallBack = onClickEpisodeButtonCallBack;
 		mOnCharaSelectButtonCallBack = onCharaSelectButtonCallBack;
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[chara];
+		var charaPrefab = PrefabFolder.ResourcesLoadInstantiateTo<CharaSettingData>("Prefabs/CharacterCutIns/"+chara.ToString(),mCharaSelectButton.transform);
+		charaPrefab.SetCutInPos ();
+		var MusicLength = SoundManager.Instance.BgmClips[(int)chara].length;
+		mMusicTimeLabel.text = new FroatToMinUtil().FroatToMin((MusicLength));
 	}
 
 	/// <summary>
