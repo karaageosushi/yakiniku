@@ -35,6 +35,9 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 				return bgmSource;
 			}
 		}
+		public AudioClip GetAudioClipFromIndex(int index){
+			return bgmClips [index];
+		}
 	private AudioSource[] seSources = new AudioSource[cNumChannel];
 
 	Queue<int> seRequestQueue = new Queue< int >();
@@ -48,7 +51,7 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 		}
 
 		bgmSource = gameObject.AddComponent<AudioSource>();
-		bgmSource.loop = true;
+		//bgmSource.loop = true;
 
 		for(int i = 0 ; i < seSources.Length ; i++ ){
 			seSources[i] = gameObject.AddComponent<AudioSource>();
@@ -180,6 +183,11 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 	{
 		seRequestQueue.Clear();
 	}
+
+		[ContextMenu("デバッグで０番のBGMを再生")]
+		void DebugPlayBgm(){
+			PlayBgm (0);
+		}
 
 }
 }

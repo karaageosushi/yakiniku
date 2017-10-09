@@ -14,18 +14,35 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 	[ContextMenu("デバッグで初期情報をセット！")]
 	public void SetEarlyUserData(){
 		var chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.CANON;
+		chara.mCharacterType = (int)CharacterType.AINE;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.BEETHOVEN;
+		chara.mCharacterType = (int)CharacterType.CANNON;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.BRAHMS;
+		chara.mCharacterType = (int)CharacterType.HALNAUMY;
 		mUserData.mCharaSaveDataList.Add (chara);
 
-		mUserData.mCurrentSelectedCharacter = CharacterType.CANON;
+		chara = new CharaSaveData ();
+		chara.mCharacterType = (int)CharacterType.JEMENOPPEEDY;
+		mUserData.mCharaSaveDataList.Add (chara);
+
+		chara = new CharaSaveData ();
+		chara.mCharacterType = (int)CharacterType.LIEUNNE;
+		mUserData.mCharaSaveDataList.Add (chara);
+
+		chara = new CharaSaveData ();
+		chara.mCharacterType = (int)CharacterType.MNOINE;
+		mUserData.mCharaSaveDataList.Add (chara);
+
+		chara = new CharaSaveData ();
+		chara.mCharacterType = (int)CharacterType.PLIMMAVAERHA;
+		mUserData.mCharaSaveDataList.Add (chara);
+
+
+		mUserData.mCurrentSelectedCharacter = CharacterType.CANNON;
 	}
 
 	void Awake(){
