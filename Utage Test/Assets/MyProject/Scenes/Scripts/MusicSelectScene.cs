@@ -7,7 +7,7 @@ using System.Linq;
 public class MusicSelectScene : BaseScene {
 
 	[SerializeField]
-	DialogBase mEpisodeDialog;
+	EpisodeSelectDialog mEpisodeDialog;
 	[SerializeField]
 	MusicItem CharaMusicItemPrefab;
 	[SerializeField]
@@ -16,7 +16,8 @@ public class MusicSelectScene : BaseScene {
 	GridLayoutGroup mGrid;
 	List<MusicItem> mItemLsit = new List<MusicItem>();
 
-	public void OpenEpisodeDialog(){
+	public void OpenEpisodeDialog(CharacterType chara ){
+		mEpisodeDialog.Init (CharacterMasterData.CharaEpsodeDataList.Where(c => c.mChara == chara).ToList());
 		mEpisodeDialog.Open ();
 	}
 
@@ -40,7 +41,7 @@ public class MusicSelectScene : BaseScene {
 		foreach (var chara in charaList) {
 			var item = PrefabFolder.InstantiateTo<MusicItem> (CharaMusicItemPrefab,mGrid.transform);
 			item.Init (chara,()=>{
-				OpenEpisodeDialog();
+				OpenEpisodeDialog(item.CharacterType);
 			},()=>{
 				this.Close();
 				mMainScene.UpdateMainDisplay();

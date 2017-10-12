@@ -54,6 +54,7 @@
      <Compile Include="Assets\MyProject\Scenes\Scripts\CharacterImageSelector.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\DialogBase.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\EpisodeItem.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\EpisodeSelectDialog.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\GameSystemManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MainScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MasterData\CharacterMasterData.cs" />

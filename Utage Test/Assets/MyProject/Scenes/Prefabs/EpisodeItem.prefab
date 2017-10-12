@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222996966997216610}
   - component: {fileID: 114802527343265680}
   - component: {fileID: 114644480123920518}
+  - component: {fileID: 114491530867976242}
   m_Layer: 5
   m_Name: EpisodeItem
   m_TagString: Untagged
@@ -78,7 +79,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30AB\u30CE\u30F3\u306E\u58F0\u512A\u3055\u3093"
+  m_Text: title
+--- !u!114 &114491530867976242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150263808127176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b5df588ca1e485a94898e4f6486c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTitle: {fileID: 114099327448632390}
 --- !u!114 &114644480123920518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.4, y: 0}
+  m_AnchoredPosition: {x: -751, y: 1747}
   m_SizeDelta: {x: 447.4, y: 85.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224638336823103430

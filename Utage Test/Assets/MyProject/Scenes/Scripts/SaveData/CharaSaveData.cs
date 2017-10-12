@@ -15,6 +15,8 @@ public class CharaSaveData  {
 	/// </summary>
 	public int mCharacterType=0;
 
+	public int mStoryReleaseCount = 1;
+
 	public CharaSaveData(){
 	}
 

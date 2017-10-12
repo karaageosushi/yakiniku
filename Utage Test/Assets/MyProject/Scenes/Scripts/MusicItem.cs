@@ -8,6 +8,11 @@ using SoundUtil;
 public class MusicItem : MonoBehaviour {
 
 	CharacterType mCharacterType;
+	public CharacterType CharacterType{
+		get{
+			return mCharacterType;
+		}
+	}
 	Action mOnClickEpisodeButtonCallBack;
 	Action mOnCharaSelectButtonCallBack;
 	[SerializeField]
