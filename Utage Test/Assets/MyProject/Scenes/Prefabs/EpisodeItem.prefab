@@ -198,6 +198,7 @@ MonoBehaviour:
   mButton: {fileID: 0}
   mReleasePossibleIndicationDisplay: {fileID: 0}
   mNonReleaseIndicationDisplay: {fileID: 0}
+  mEpsodeReleaseDialogPrefab: {fileID: 0}
 --- !u!114 &114623147720139578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,6 +342,8 @@ MonoBehaviour:
   mButton: {fileID: 114644480123920518}
   mReleasePossibleIndicationDisplay: {fileID: 1390523442753870}
   mNonReleaseIndicationDisplay: {fileID: 1150263808127176}
+  mEpsodeReleaseDialogPrefab: {fileID: 114778931689974560, guid: 6daea120aa6f04ddc9a114777b75d97a,
+    type: 2}
 --- !u!114 &114861880050527262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,6 +386,7 @@ MonoBehaviour:
   mButton: {fileID: 0}
   mReleasePossibleIndicationDisplay: {fileID: 0}
   mNonReleaseIndicationDisplay: {fileID: 0}
+  mEpsodeReleaseDialogPrefab: {fileID: 0}
 --- !u!222 &222250387973120336
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -7,9 +7,9 @@ using System;
 
 public class DialogBase : MonoBehaviour {
 	RectTransform mRect;
-	Action mOpenCallback = () => {
+	protected Action mOpenCallback = () => {
 	}; 
-	Action mCloseCallback = () => {
+	protected Action mCloseCallback = () => {
 	}; 
 
 	public void Open(Action openCallback = null){

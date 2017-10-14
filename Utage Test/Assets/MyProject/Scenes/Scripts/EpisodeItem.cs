@@ -14,15 +14,27 @@ public class EpisodeItem : MonoBehaviour {
 	GameObject mReleasePossibleIndicationDisplay;
 	[SerializeField]
 	GameObject mNonReleaseIndicationDisplay;
+	[SerializeField]
+	EpsodeReleaseDialog mEpsodeReleaseDialogPrefab;
 
 	public void Init(CharaEpisodeData data){
+
 		mCharaEpisodeData = data;
 		mTitle.text = data.mTitle;
+		SetReleasedDisPlay ();
+
+	}
+
+	public void SetReleasedDisPlay(){
+		mReleasePossibleIndicationDisplay.SetActive (false);
+		mNonReleaseIndicationDisplay.SetActive (false);
+		mButton.onClick.RemoveAllListeners ();
 		mButton.onClick.AddListener (()=>{
 			//通常選択時の処理を記載
 			Debug.Log("シナリオ購読画面へ繊維します！");
 		});
 	}
+
 	/// <summary>
 	/// 解放されていないが解放可能な状態でタップした場合
 	/// </summary>
@@ -31,6 +43,8 @@ public class EpisodeItem : MonoBehaviour {
 		mReleasePossibleIndicationDisplay.SetActive (true);
 		mButton.onClick.AddListener (()=>{
 			//解放されていないが解放可能な状態でタップした場合の処理を記載
+			var dialog = PrefabFolder.InstantiateTo<EpsodeReleaseDialog>(mEpsodeReleaseDialogPrefab,GameSystemManager.Instance.DialogEmmiter);
+			dialog.Init(mCharaEpisodeData,this);
 		});
 	}
 

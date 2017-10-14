@@ -14,6 +14,9 @@ public class UserData  {
 			return mCharaSaveDataList.Where (cs => cs.CharacterType == mCurrentSelectedCharacter).FirstOrDefault ();
 		}
 	}
+	public CharaSaveData GetCharacterSaveDataFromType(CharacterType type){
+		return mCharaSaveDataList.Where (cs => cs.CharacterType == type).FirstOrDefault ();
+	}
 	public List<CharaSaveData> mCharaSaveDataList = new List<CharaSaveData> ();
 	public int mMoney = 0;
 	public float mVolBgm = 0.5f;

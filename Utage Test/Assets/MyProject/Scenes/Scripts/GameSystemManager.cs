@@ -11,6 +11,13 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 			return mUserData;
 		}
 	}
+	[SerializeField]
+	Transform mDialogEmmiter;
+	public Transform DialogEmmiter{
+		get{
+			return mDialogEmmiter;
+		}
+	}
 
 	[ContextMenu("デバッグで初期情報をセット！")]
 	public void SetEarlyUserData(){
