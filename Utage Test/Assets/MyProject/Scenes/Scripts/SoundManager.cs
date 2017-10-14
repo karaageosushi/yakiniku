@@ -56,7 +56,7 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 		}
 
 		bgmSource = gameObject.AddComponent<AudioSource>();
-		//bgmSource.loop = true;
+		bgmSource.loop = true;
 
 		for(int i = 0 ; i < seSources.Length ; i++ ){
 			seSources[i] = gameObject.AddComponent<AudioSource>();

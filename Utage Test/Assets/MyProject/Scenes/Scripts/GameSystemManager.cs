@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoundUtil;
 
 public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 
@@ -47,7 +48,15 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 
 	void Awake(){
 		//一旦はデバッグで情報をセットする！後々はローカルにセーブしたデータに差し替える
-		SetEarlyUserData();
+		var UserData = SaveData.LoadUserData();
+		if (UserData == null) {
+			SetEarlyUserData();
+			SaveData.SaveUserData ();
+		} else {
+			mUserData = UserData;
+		}
+		SoundManager.Instance.volume.bgm = mUserData.mVolBgm;
+		SoundManager.Instance.volume.se = mUserData.mVolSe;
 	}
 
 	// Use this for initialization

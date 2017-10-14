@@ -23,6 +23,9 @@ public class SettingScene : BaseScene {
 		base.Close ();
 		SoundManager.Instance.volume.bgm = mBGMSlider.value;
 		SoundManager.Instance.volume.se = mSESlider.value;
+		GameSystemManager.Instance.UserData.mVolBgm = mBGMSlider.value;
+		GameSystemManager.Instance.UserData.mVolSe = mSESlider.value;
+		SaveData.SaveUserData ();
 	}
 
 	// Use this for initialization

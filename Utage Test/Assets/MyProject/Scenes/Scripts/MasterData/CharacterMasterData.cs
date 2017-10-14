@@ -59,15 +59,18 @@ public struct CharaEpisodeData{
 	public CharacterType mChara;
 	public int mTitleNumber;
 	public string mTitle;
+	public int mPriceNecessaryRelease;
 
 	public CharaEpisodeData(
 		CharacterType chara,
 		int number,
-		string title
+		string title,
+		int priceNecessaryRelease
 	){
 		mChara = chara;
 		mTitleNumber = number;
 		mTitle = title;
+		mPriceNecessaryRelease = priceNecessaryRelease;
 	}
 }
 
@@ -159,61 +162,61 @@ public class CharacterMasterData {
 
 	//キャラクターのエピソードデータ
 	public static List<CharaEpisodeData> CharaEpsodeDataList = new List<CharaEpisodeData> (){
-		new CharaEpisodeData(CharacterType.MNOINE,1,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,2,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,3,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,4,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,5,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,6,"無題"),
-		new CharaEpisodeData(CharacterType.MNOINE,7,"着替え"),
+		new CharaEpisodeData(CharacterType.MNOINE,1,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,2,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,3,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,4,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,5,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,6,"無題",10),
+		new CharaEpisodeData(CharacterType.MNOINE,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.AINE,1,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,2,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,3,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,4,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,5,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,6,"無題"),
-		new CharaEpisodeData(CharacterType.AINE,7,"着替え"),
+		new CharaEpisodeData(CharacterType.AINE,1,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,2,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,3,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,4,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,5,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,6,"無題",10),
+		new CharaEpisodeData(CharacterType.AINE,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.CANNON,1,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,2,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,3,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,4,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,5,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,6,"無題"),
-		new CharaEpisodeData(CharacterType.CANNON,7,"着替え"),
+		new CharaEpisodeData(CharacterType.CANNON,1,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,2,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,3,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,4,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,5,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,6,"無題",10),
+		new CharaEpisodeData(CharacterType.CANNON,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,1,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,2,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,3,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,4,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,5,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,6,"無題"),
-		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,7,"着替え"),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,1,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,2,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,3,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,4,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,5,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,6,"無題",10),
+		new CharaEpisodeData(CharacterType.PLIMMAVAERHA,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.LIEUNNE,1,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,2,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,3,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,4,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,5,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,6,"無題"),
-		new CharaEpisodeData(CharacterType.LIEUNNE,7,"着替え"),
+		new CharaEpisodeData(CharacterType.LIEUNNE,1,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,2,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,3,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,4,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,5,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,6,"無題",10),
+		new CharaEpisodeData(CharacterType.LIEUNNE,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,1,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,2,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,3,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,4,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,5,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,6,"無題"),
-		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,7,"着替え"),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,1,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,2,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,3,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,4,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,5,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,6,"無題",10),
+		new CharaEpisodeData(CharacterType.JEMENOPPEEDY,7,"着替え",10),
 		//--------------------------------------------
-		new CharaEpisodeData(CharacterType.HALNAUMY,1,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,2,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,3,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,4,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,5,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,6,"無題"),
-		new CharaEpisodeData(CharacterType.HALNAUMY,7,"着替え"),
+		new CharaEpisodeData(CharacterType.HALNAUMY,1,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,2,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,3,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,4,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,5,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,6,"無題",10),
+		new CharaEpisodeData(CharacterType.HALNAUMY,7,"着替え",10),
 		//--------------------------------------------
 	};
 

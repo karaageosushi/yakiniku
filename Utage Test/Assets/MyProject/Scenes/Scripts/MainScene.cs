@@ -29,14 +29,26 @@ public class MainScene : MonoBehaviour {
 	Button mStartButton;
 	[SerializeField]
 	Button mStopButton;
-	bool mIsPlayCharacterMusic = false;
+	[SerializeField]
+	Slider mMusicSlider;
+	[SerializeField]
+	Image mMusciValFillImage;
+	[SerializeField]
+	GetRewordDialog mGetRewordDialog;
+	[SerializeField]
+	DebugScene mDebugScene;
 
-	public float MusicTime{
+	const int MIN_TO_MONEY = 2;
+
+	bool mIsPlayCharacterMusic = false;
+	//最大再生時間
+	const float MAX_MUSIC_TIME = 7200.0f;
+	float SetiingTime{
 		get{
-			//ダミーで値を設定（後ほど変える）
-			return 66.0f;
+			return MAX_MUSIC_TIME * mMusicSlider.value;
 		}
 	}
+	float mSetiingTimeSnapShot = 0;
 
 	void UpdateMusicButtonDisPlay(){
 		mStartButton.gameObject.SetActive (false);
@@ -47,7 +59,9 @@ public class MainScene : MonoBehaviour {
 			mStartButton.gameObject.SetActive (true);
 		}
 	}
-
+	public void OpenDebugScene(){
+		mDebugScene.Open ();
+	}
 
 	public void OpenMusicSelectScene(){
 		mMusicSelectScene.Open();
@@ -59,6 +73,11 @@ public class MainScene : MonoBehaviour {
 
 	void Start () {
 		UpdateMainDisplay ();
+		//スライドのイベント登録
+		mMusicSlider.onValueChanged.AddListener((value) => {
+			mMusciValFillImage.fillAmount = value;
+			mTimeLabel.text = new FroatToMinUtil().FroatToMin((MAX_MUSIC_TIME*value));
+		});
 	}
 
 	/// <summary>
@@ -75,7 +94,7 @@ public class MainScene : MonoBehaviour {
 		mTimeLabel.text = new FroatToMinUtil().FroatToMin(selectCharaAudio.length);
 		mCharacterImageSelector.ShowCharactor (selectChara);
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara];
-		mLovePointLabel.text = "×"+GameSystemManager.Instance.UserData.mSelectedCharaSaveData.mLovePoint;
+		mLovePointLabel.text = "×"+GameSystemManager.Instance.UserData.mMoney;
 		//現在のキャラクターのコメントを取得
 		var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mTime == TimeUtil.GetCurrentTimeType()).ToList();
 		int rand = UnityEngine.Random.Range (0,currentCharaCommentList.Count);
@@ -87,19 +106,27 @@ public class MainScene : MonoBehaviour {
 	/// 現在選択中のキャラクターのミュージックを流す
 	/// </summary>
 	public void PlayCurrentSelectedCharacterMusic(){
-		Debug.Log ("PlayCurrentSelectedCharacterMusic");
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
 		SoundManager.Instance.PlayBgm ((int)selectChara);
 		mIsPlayCharacterMusic = true;
 		UpdateMusicButtonDisPlay ();
+		mSetiingTimeSnapShot = SetiingTime;
+		float currentMusicTime = 0;
 		//mMusicDisposableUpdateTrigger = new GameObject ("mMusicDisposableUpdateTrigger");
 		mMusicDisposableUpdate = this.UpdateAsObservable().Subscribe(_=>{
 			if(SoundManager.Instance.mCurrentPlayBgm.clip == null)return;
-			var MusicLength = SoundManager.Instance.mCurrentPlayBgm.clip.length;
-			var currentMusicTime = SoundManager.Instance.mCurrentPlayBgm.time;
-			var remainingTime = MusicLength-currentMusicTime;
+			currentMusicTime += Time.deltaTime;
+			var remainingTime = mSetiingTimeSnapShot-currentMusicTime;
 			mTimeLabel.text = new FroatToMinUtil().FroatToMin((remainingTime));
 			if(remainingTime <= 0){
+				//ここに報酬獲得の処理を入れる
+				var rewordVal = new FroatToMinUtil().FromToMinVal(mSetiingTimeSnapShot)*MIN_TO_MONEY;
+				mGetRewordDialog.Init(rewordVal);
+				GameSystemManager.Instance.UserData.mMoney += rewordVal;
+				//表示を更新
+				mLovePointLabel.text = ""+GameSystemManager.Instance.UserData.mMoney;
+				//データをSave
+				SaveData.SaveUserData ();
 				StopCurrentSelectedCharacterMusic();
 			}
 		});
@@ -107,12 +134,6 @@ public class MainScene : MonoBehaviour {
 	}
 
 	public void StopCurrentSelectedCharacterMusic(){
-		Debug.Log ("StopCurrentSelectedCharacterMusic");
-		/*
-		if (mMusicDisposableUpdateTrigger != null) {
-			Destroy (mMusicDisposableUpdateTrigger);
-		}
-		*/
 		mMusicDisposableUpdate.Dispose ();
 		SoundManager.Instance.StopBgm ();
 		mIsPlayCharacterMusic = false;
@@ -125,6 +146,9 @@ public class FroatToMinUtil{
 		int min = (int)(time / 60);
 		int second = (int)(time%60);
 		return min.ToString ("00") + ":" + second.ToString ("00");
+	}
+	public int FromToMinVal(float time){
+		return (int)(time / 60);
 	}
 }
 
