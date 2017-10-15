@@ -13,6 +13,8 @@ public class MusicSelectScene : BaseScene {
 	[SerializeField]
 	MainScene mMainScene;
 	[SerializeField]
+	CharaDetaileScene mCharaDetaileScene;
+	[SerializeField]
 	GridLayoutGroup mGrid;
 	List<MusicItem> mItemLsit = new List<MusicItem>();
 
@@ -44,6 +46,9 @@ public class MusicSelectScene : BaseScene {
 				OpenEpisodeDialog(item.CharacterType);
 			},()=>{
 				this.Close();
+				//ここにキャラ詳細画面を開く処理を入れる
+				mCharaDetaileScene.Open();
+				mCharaDetaileScene.Init(CharacterMasterData.CharacterDict[item.CharacterType],item.CharacterType);
 				mMainScene.UpdateMainDisplay();
 			}
 			);

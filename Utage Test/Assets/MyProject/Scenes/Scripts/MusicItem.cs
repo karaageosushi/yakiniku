@@ -44,7 +44,7 @@ public class MusicItem : MonoBehaviour {
 	/// キャラ選択を押した場合
 	/// </summary>
 	public void OnCharaSelectButton(){
-		GameSystemManager.Instance.UserData.mCurrentSelectedCharacter = mCharacterType;
+		//GameSystemManager.Instance.UserData.mCurrentSelectedCharacter = mCharacterType;
 		//画面を戻る処理
 		mOnCharaSelectButtonCallBack();
 	}
