@@ -93,8 +93,8 @@ public class MainScene : MonoBehaviour {
 		AudioClip selectCharaAudio = SoundManager.Instance.GetAudioClipFromIndex ((int)selectChara);
 		mTimeLabel.text = new FroatToMinUtil().FroatToMin(selectCharaAudio.length);
 		mCharacterImageSelector.ShowCharactor (selectChara);
-		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara];
-		mLovePointLabel.text = "×"+GameSystemManager.Instance.UserData.mMoney;
+		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara].mCharaName;
+		UpDateLovePointLabel();
 		//現在のキャラクターのコメントを取得
 		var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mTime == TimeUtil.GetCurrentTimeType()).ToList();
 		int rand = UnityEngine.Random.Range (0,currentCharaCommentList.Count);
@@ -106,6 +106,7 @@ public class MainScene : MonoBehaviour {
 	/// 現在選択中のキャラクターのミュージックを流す
 	/// </summary>
 	public void PlayCurrentSelectedCharacterMusic(){
+		mMusicSlider.enabled = false;
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
 		SoundManager.Instance.PlayBgm ((int)selectChara);
 		mIsPlayCharacterMusic = true;
@@ -118,13 +119,16 @@ public class MainScene : MonoBehaviour {
 			currentMusicTime += Time.deltaTime;
 			var remainingTime = mSetiingTimeSnapShot-currentMusicTime;
 			mTimeLabel.text = new FroatToMinUtil().FroatToMin((remainingTime));
+			//緑色のながさを変える処理を入れる
+			var fillVal = remainingTime/MAX_MUSIC_TIME;
+			mMusciValFillImage.fillAmount = fillVal;
 			if(remainingTime <= 0){
 				//ここに報酬獲得の処理を入れる
 				var rewordVal = new FroatToMinUtil().FromToMinVal(mSetiingTimeSnapShot)*MIN_TO_MONEY;
 				mGetRewordDialog.Init(rewordVal);
 				GameSystemManager.Instance.UserData.mMoney += rewordVal;
 				//表示を更新
-				mLovePointLabel.text = ""+GameSystemManager.Instance.UserData.mMoney;
+				UpDateLovePointLabel();
 				//データをSave
 				SaveData.SaveUserData ();
 				StopCurrentSelectedCharacterMusic();
@@ -133,7 +137,12 @@ public class MainScene : MonoBehaviour {
 
 	}
 
+	public void UpDateLovePointLabel(){
+		mLovePointLabel.text = ""+GameSystemManager.Instance.UserData.mMoney;
+	}
+
 	public void StopCurrentSelectedCharacterMusic(){
+		mMusicSlider.enabled = true;
 		mMusicDisposableUpdate.Dispose ();
 		SoundManager.Instance.StopBgm ();
 		mIsPlayCharacterMusic = false;

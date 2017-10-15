@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class EpsodeReleaseDialog : DialogBase {
 
 	[SerializeField]
 	Text mBody;
+	[SerializeField]
+	CommonDialog mDialog;
 	CharaEpisodeData mData;
 	EpisodeItem mEpisodeItem;
 
-	public void Init(CharaEpisodeData data,EpisodeItem item){
+	public void Init(CharaEpisodeData data,EpisodeItem item,Action cloaseCallBack){
 		mData = data;
 		mEpisodeItem = item;
 		mBody.text = data.mTitle+"を"+data.mPriceNecessaryRelease+"コインで解放します。¥nよろしいですか？";
 		mCloseCallback = () => {
 			Destroy(this.gameObject);
+			cloaseCallBack();
 		};
 	}
 
@@ -30,6 +34,8 @@ public class EpsodeReleaseDialog : DialogBase {
 		} else {
 			//お金が足りませんダイアログだす
 			Debug.Log("お金が足りませんダイアログだす");
+			var commondialog = PrefabFolder.InstantiateTo<CommonDialog>(mDialog, GameSystemManager.Instance.DialogEmmiter);
+			commondialog.Init ("コインが足りません");
 		}
 		Close ();
 	}

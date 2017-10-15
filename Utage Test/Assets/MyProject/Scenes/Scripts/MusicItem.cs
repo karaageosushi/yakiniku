@@ -27,7 +27,7 @@ public class MusicItem : MonoBehaviour {
 		mCharacterType = chara;
 		mOnClickEpisodeButtonCallBack = onClickEpisodeButtonCallBack;
 		mOnCharaSelectButtonCallBack = onCharaSelectButtonCallBack;
-		mCharaNameLabel.text = CharacterMasterData.CharacterDict[chara];
+		mCharaNameLabel.text = CharacterMasterData.CharacterDict[chara].mCharaName;
 		var charaPrefab = PrefabFolder.ResourcesLoadInstantiateTo<CharaSettingData>("Prefabs/CharacterCutIns/"+chara.ToString(),mCharaSelectButton.transform);
 		charaPrefab.SetCutInPos ();
 		var MusicLength = SoundManager.Instance.BgmClips[(int)chara].length;

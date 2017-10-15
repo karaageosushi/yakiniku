@@ -6,6 +6,8 @@ public class DebugScene : BaseScene {
 
 	[SerializeField]
 	GetRewordDialog mGetRewordDialog;
+	[SerializeField]
+	MainScene mMainScene;
 
 	public void OpenGetRewordDialog(){
 		mGetRewordDialog.Init(1);
@@ -16,6 +18,13 @@ public class DebugScene : BaseScene {
 	}
 	public void ResetUserData(){
 		SaveData.ResetUserData ();
+		Application.Quit ();
+	}
+
+	public void AddMoney(){
+		GameSystemManager.Instance.UserData.mMoney = 9999;
+		mMainScene.UpdateMainDisplay ();
+		SaveData.SaveUserData ();
 	}
 
 	// Use this for initialization

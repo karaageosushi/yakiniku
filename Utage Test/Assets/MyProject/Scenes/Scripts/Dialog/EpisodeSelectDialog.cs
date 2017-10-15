@@ -29,7 +29,7 @@ public class EpisodeSelectDialog : DialogBase {
 		//全ては解放しない処理
 		for (int i = 0; i < dataList.Count; i++) {
 			var item = PrefabFolder.InstantiateTo<EpisodeItem> (mEpisodeItemPrefab,mGrid.transform);
-			item.Init (dataList[i]);
+			item.Init (dataList[i],this);
 			mEpisodeItemList.Add (item);
 			if (i+1 == charaSaveData.mStoryReleaseCount+1) {
 				//未解放状態だけれどコインを払えば解放可能表示
@@ -39,6 +39,10 @@ public class EpisodeSelectDialog : DialogBase {
 				item.SetNonReleaseIndicationDisplay ();
 			}
 		}
+	}
+
+	public void UpdateList(){
+		Init (mCharaEpisodeDataList);
 	}
 
 	// Use this for initialization

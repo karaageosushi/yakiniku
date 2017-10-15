@@ -74,21 +74,98 @@ public struct CharaEpisodeData{
 	}
 }
 
+public struct AdvCharacterInfo{
+	public string mCharaName;
+	public string mComposerName;
+	public string mSongName;
+	public string mHistory;
+	public string mCharacterInfo;
 
+	public AdvCharacterInfo(
+		string charaName,
+		string composerName,
+		string songName,
+		string history,
+		string characterInfo
+	){
+		mCharaName = charaName;
+		mComposerName = composerName;
+		mSongName = songName;
+		mHistory = history;
+		mCharacterInfo = characterInfo;
+	}
+
+}
 
 /// <summary>
 /// キャラクター情報のマスターデータ
 /// </summary>
 public class CharacterMasterData {
-	public static Dictionary<CharacterType,string> CharacterDict = new Dictionary<CharacterType, string>() {
-		{CharacterType.NONE,""},
-		{CharacterType.MNOINE,"ノイン"},
-		{CharacterType.AINE,"アイネ"},
-		{CharacterType.CANNON,"カノン"},
-		{CharacterType.PLIMMAVAERHA,"プリマヴェーラ"},
-		{CharacterType.LIEUNNE,"リュヌ"},
-		{CharacterType.JEMENOPPEEDY,"ジムノペディ"},
-		{CharacterType.HALNAUMY,"ハルノウミ"},
+	public static Dictionary<CharacterType,AdvCharacterInfo> CharacterDict = new Dictionary<CharacterType, AdvCharacterInfo>() {
+		{CharacterType.NONE,
+			new AdvCharacterInfo(
+				"",
+				"",
+				"",
+				"",
+				"")
+		},
+		{CharacterType.MNOINE,
+			new AdvCharacterInfo(
+				"ノイン",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.AINE,
+			new AdvCharacterInfo(
+				"アイネ",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.CANNON,
+			new AdvCharacterInfo(
+				"カノン",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.PLIMMAVAERHA,
+			new AdvCharacterInfo(
+				"プリマヴェーラ",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.LIEUNNE,
+			new AdvCharacterInfo(
+				"リュヌ",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.JEMENOPPEEDY,
+			new AdvCharacterInfo(
+				"ジムノペディ",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
+		{CharacterType.HALNAUMY,
+			new AdvCharacterInfo(
+				"ハルノウミ",
+				"作曲者名が入ります",
+				"曲名が入ります",
+				"時代が入ります",
+				"キャラ説明が入ります¥nキャラ説明が入ります¥nキャラ説明が入ります¥n")
+			},
 	};
 
 	/// <summary>

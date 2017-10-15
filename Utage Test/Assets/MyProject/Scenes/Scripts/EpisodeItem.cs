@@ -16,9 +16,10 @@ public class EpisodeItem : MonoBehaviour {
 	GameObject mNonReleaseIndicationDisplay;
 	[SerializeField]
 	EpsodeReleaseDialog mEpsodeReleaseDialogPrefab;
+	EpisodeSelectDialog mParentDialog;
 
-	public void Init(CharaEpisodeData data){
-
+	public void Init(CharaEpisodeData data,EpisodeSelectDialog parentDialog){
+		mParentDialog = parentDialog;
 		mCharaEpisodeData = data;
 		mTitle.text = data.mTitle;
 		SetReleasedDisPlay ();
@@ -44,7 +45,9 @@ public class EpisodeItem : MonoBehaviour {
 		mButton.onClick.AddListener (()=>{
 			//解放されていないが解放可能な状態でタップした場合の処理を記載
 			var dialog = PrefabFolder.InstantiateTo<EpsodeReleaseDialog>(mEpsodeReleaseDialogPrefab,GameSystemManager.Instance.DialogEmmiter);
-			dialog.Init(mCharaEpisodeData,this);
+			dialog.Init(mCharaEpisodeData,this,()=>{
+				mParentDialog.UpdateList();
+			});
 		});
 	}
 
