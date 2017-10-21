@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class EpisodeSelectDialog : DialogBase {
 
@@ -16,6 +17,7 @@ public class EpisodeSelectDialog : DialogBase {
 	List<EpisodeItem> mEpisodeItemList = new List<EpisodeItem> ();
 
 	public void Init(List<CharaEpisodeData> dataList){
+		
 		var charaType = dataList.First ().mChara;
 		var charaSaveData = GameSystemManager.Instance.UserData.mCharaSaveDataList.Where (csd => csd.CharacterType == charaType).FirstOrDefault ();
 		mCharaNameText.text = CharacterMasterData.CharacterDict[charaType] + "エピソード";

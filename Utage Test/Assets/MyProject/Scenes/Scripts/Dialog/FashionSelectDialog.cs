@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class FashionSelectDialog : DialogBase {
 
@@ -17,7 +18,8 @@ public class FashionSelectDialog : DialogBase {
 	List<FashionItem> mFashionItemList = new List<FashionItem> ();
 
 
-	public void Init(List<CharaFashionData> dataList){
+	public void Init(List<CharaFashionData> dataList,Action closeCallback){
+		mCloseCallback = closeCallback;
 		mCharaFashionDataList = dataList;
 		var charaType = dataList.First ().mChara;
 		mCharaNameText.text = CharacterMasterData.CharacterDict.Where (c => c.Key == charaType).First ().Value.mCharaName;

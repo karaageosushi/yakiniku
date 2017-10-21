@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using SoundUtil;
+using System.Linq;
 
 public class MusicItem : MonoBehaviour {
 
@@ -28,7 +29,8 @@ public class MusicItem : MonoBehaviour {
 		mOnClickEpisodeButtonCallBack = onClickEpisodeButtonCallBack;
 		mOnCharaSelectButtonCallBack = onCharaSelectButtonCallBack;
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[chara].mCharaName;
-		var charaPrefab = PrefabFolder.ResourcesLoadInstantiateTo<CharaSettingData>("Prefabs/CharacterCutIns/"+chara.ToString(),mCharaSelectButton.transform);
+		var charaSaveData = GameSystemManager.Instance.UserData.mCharaSaveDataList.Where (cs => cs.mCharacterType == (int)chara).First ();
+		var charaPrefab = PrefabFolder.ResourcesLoadInstantiateTo<CharaSettingData>("Prefabs/CharacterCutIns/"+chara.ToString()+"_"+charaSaveData.mSelectedFashionId,mCharaSelectButton.transform);
 		charaPrefab.SetCutInPos ();
 		var MusicLength = SoundManager.Instance.BgmClips[(int)chara].length;
 		mMusicTimeLabel.text = new FroatToMinUtil().FroatToMin((MusicLength));

@@ -20,6 +20,7 @@ public class FashionItem : MonoBehaviour {
 			//通常選択時の処理を記載
 			var chara = GameSystemManager.Instance.UserData.mCharaSaveDataList.Where(c=>c.mCharacterType == (int)data.mChara).First();
 			chara.mSelectedFashionId = data.mId;
+			SaveData.SaveUserData ();
 			dialog.Close();
 		});
 	}

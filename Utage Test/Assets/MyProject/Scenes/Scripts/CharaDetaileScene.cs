@@ -39,7 +39,6 @@ public class CharaDetaileScene : BaseScene {
 		mCharacterInfo.text = info.mCharacterInfo;
 		mCharaName.text = info.mCharaName;
 		mCharacterImageSelector.ShowCharactor (chara);
-
 	}
 
 	public override void Open ()
@@ -60,11 +59,15 @@ public class CharaDetaileScene : BaseScene {
 	public void SetMainChara(){
 		GameSystemManager.Instance.UserData.mCurrentSelectedCharacter = mCharacterType;
 		mMainScene.UpdateMainDisplay();
+		SaveData.SaveUserData ();
 		Close ();
 	}
 
 	public void OpenmFashionSelectDialog(){
-		mFashionSelectDialog.Init (CharacterMasterData.CharaFashionDataList.Where(cf=>cf.mChara == mCharacterType).ToList());
+		mFashionSelectDialog.Init (
+			CharacterMasterData.CharaFashionDataList.Where(cf=>cf.mChara == mCharacterType).ToList(),
+			()=>{mCharacterImageSelector.ShowCharactor(mCharacterType);}
+		);
 	}
 
 	// Use this for initialization
