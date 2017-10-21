@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class CharaDetaileScene : BaseScene {
 
@@ -23,6 +24,8 @@ public class CharaDetaileScene : BaseScene {
 	Text mCharaName;
 	[SerializeField]
 	MusicSelectScene mMusicSelectScene;
+	[SerializeField]
+	FashionSelectDialog mFashionSelectDialog;
 
 	AdvCharacterInfo mAdvCharacterInfo;
 	CharacterType mCharacterType;
@@ -58,6 +61,10 @@ public class CharaDetaileScene : BaseScene {
 		GameSystemManager.Instance.UserData.mCurrentSelectedCharacter = mCharacterType;
 		mMainScene.UpdateMainDisplay();
 		Close ();
+	}
+
+	public void OpenmFashionSelectDialog(){
+		mFashionSelectDialog.Init (CharacterMasterData.CharaFashionDataList.Where(cf=>cf.mChara == mCharacterType).ToList());
 	}
 
 	// Use this for initialization

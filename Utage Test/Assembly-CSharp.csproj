@@ -58,8 +58,10 @@
      <Compile Include="Assets\MyProject\Scenes\Scripts\Dialog\DialogBase.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\Dialog\EpisodeSelectDialog.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\Dialog\EpsodeReleaseDialog.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\Dialog\FashionSelectDialog.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\Dialog\GetRewordDialog.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\EpisodeItem.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\FashionItem.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\GameSystemManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MainScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MasterData\CharacterMasterData.cs" />

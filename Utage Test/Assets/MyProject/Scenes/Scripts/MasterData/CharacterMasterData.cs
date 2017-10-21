@@ -55,6 +55,24 @@ public struct CharaCommentData{
 		mComment = comment;
 	}
 }
+public struct CharaFashionData{
+	public CharacterType mChara;
+	public int mId;
+	public string mName;
+
+	public CharaFashionData(
+		CharacterType chara,
+		int id,
+		string name
+	){
+		mChara = chara;
+		mId = id;
+		mName = name;
+	}
+}
+
+
+
 public struct CharaEpisodeData{
 	public CharacterType mChara;
 	public int mTitleNumber;
@@ -235,6 +253,32 @@ public class CharacterMasterData {
 		new CharaCommentData(CharacterType.HALNAUMY,TimeType.NIGHT,"ハルノウミ:夜：コメント"),
 		new CharaCommentData(CharacterType.HALNAUMY,TimeType.LATE_NIGHT,"ハルノウミ:深夜：コメント"),
 		//----------------------------------
+	};
+	/// <summary>
+	/// キャラクターのファッションデータ
+	/// </summary>
+	public static List<CharaFashionData> CharaFashionDataList = new List<CharaFashionData> () {
+		new CharaFashionData (CharacterType.MNOINE, 0, "通常着"),
+		new CharaFashionData (CharacterType.MNOINE, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.AINE, 0, "通常着"),
+		new CharaFashionData (CharacterType.AINE, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.CANNON, 0, "通常着"),
+		new CharaFashionData (CharacterType.CANNON, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.PLIMMAVAERHA, 0, "通常着"),
+		new CharaFashionData (CharacterType.PLIMMAVAERHA, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.LIEUNNE, 0, "通常着"),
+		new CharaFashionData (CharacterType.LIEUNNE, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.JEMENOPPEEDY, 0, "通常着"),
+		new CharaFashionData (CharacterType.JEMENOPPEEDY, 1, "ラフ"),
+		//---------------------------------------------------
+		new CharaFashionData (CharacterType.HALNAUMY, 0, "通常着"),
+		new CharaFashionData (CharacterType.HALNAUMY, 1, "ラフ"),
+		//---------------------------------------------------
 	};
 
 	//キャラクターのエピソードデータ

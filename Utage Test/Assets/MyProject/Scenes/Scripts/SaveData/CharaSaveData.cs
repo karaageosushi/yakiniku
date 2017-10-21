@@ -17,6 +17,10 @@ public class CharaSaveData  {
 
 	public int mStoryReleaseCount = 1;
 
+	public int mFashionReleaseCount = 1;
+
+	public int mSelectedFashionId = 0;
+
 	public CharaSaveData(){
 	}
 
