@@ -13,45 +13,53 @@ public enum CharacterType{
 	HALNAUMY=7,
 }
 
-public enum TimeType{
-	MORNING,
-	NOON,
-	THE_EVENING,
-	NIGHT,
-	LATE_NIGHT,
+public enum CommentType{
+	MORNING,//朝
+	NOON,//昼
+	THE_EVENING,//夕方
+	NIGHT,//夜
+	LATE_NIGHT,//深夜
+	TIMER,//タイマー時
+	COMMON,//汎用
+	TIMER_SUCCESS,//タイマー成功
+	TIMER_FAILURE,//タイマー失敗
+	TAPPED,//タップ時
+	LEAVING,//放置時
 }
 public class TimeUtil{
-	public static TimeType GetCurrentTimeType(){
+	public static CommentType GetCurrentTimeType(){
 		//ここの値は、正確に取得したいならサーバー時間にする
 		var currentTime = System.DateTime.Now;
+		//Debug.Log ("currentTime.Hour="+currentTime.Hour);
 		if (currentTime.Hour >= 6 && currentTime.Hour <= 9) {
-			return TimeType.MORNING;
+			return CommentType.MORNING;
 		} else if (currentTime.Hour >= 10 && currentTime.Hour <= 14) {
-			return TimeType.NOON;
+			return CommentType.NOON;
 		} else if (currentTime.Hour >= 15 && currentTime.Hour <= 17) {
-			return TimeType.THE_EVENING;
-		} else if (currentTime.Hour >= 18 && currentTime.Hour <= 0) {
-			return TimeType.NIGHT;
-		} else if (currentTime.Hour >= 1 && currentTime.Hour <= 5) {
-			return TimeType.LATE_NIGHT;
+			return CommentType.THE_EVENING;
+		} else if (currentTime.Hour >= 18 && currentTime.Hour <= 23) {
+			return CommentType.NIGHT;
+		} else if (currentTime.Hour >= 0 && currentTime.Hour <= 5) {
+			return CommentType.LATE_NIGHT;
 		} else {
-			return TimeType.MORNING;
+			Debug.LogError ("規定外の時間です");
+			return CommentType.MORNING;
 		}
 	}
 }
 
 public struct CharaCommentData{
 	public CharacterType mChara;
-	public TimeType mTime;
+	public CommentType mCommentType;
 	public string mComment;
 
 	public CharaCommentData(
 		CharacterType chara,
-		TimeType time,
+		CommentType time,
 		string comment
 	){
 		mChara = chara;
-		mTime = time;
+		mCommentType = time;
 		mComment = comment;
 	}
 }
@@ -190,68 +198,118 @@ public class CharacterMasterData {
 	/// キャラクターのデータ　newばっかりで重いのであとでキャッシュするようにする・・・あとで・・・
 	/// </summary>
 	public static List<CharaCommentData> CharaCommentDataList = new List<CharaCommentData> (){
-		new CharaCommentData(CharacterType.MNOINE,TimeType.MORNING,"ノイン:朝：コメント1"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.MORNING,"ノイン:朝：コメント2"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.MORNING,"ノイン:朝：コメント3"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.MORNING,"ノイン:朝：コメント4"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.NOON,"ノイン:昼：コメント"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.THE_EVENING,"ノイン:夕：コメント"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.NIGHT,"ノイン:夜：コメント"),
-		new CharaCommentData(CharacterType.MNOINE,TimeType.LATE_NIGHT,"ノイン:深夜：コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.MORNING,"ノイン:朝：コメント1"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.MORNING,"ノイン:朝：コメント2"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.MORNING,"ノイン:朝：コメント3"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.MORNING,"ノイン:朝：コメント4"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.NOON,"ノイン:昼：コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.THE_EVENING,"ノイン:夕：コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.NIGHT,"ノイン:夜：コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.LATE_NIGHT,"ノイン:深夜：コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.TIMER,"ノイン:再生中コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.COMMON,"ノイン:汎用コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.TIMER_SUCCESS,"ノイン:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.TIMER_FAILURE,"ノイン:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.LEAVING,"ノイン:放置時コメント"),
+		new CharaCommentData(CharacterType.MNOINE,CommentType.TAPPED,"ノイン:タップ時コメント"),
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.AINE,TimeType.MORNING,"アイネ:朝：コメント1"),
-		new CharaCommentData(CharacterType.AINE,TimeType.MORNING,"アイネ:朝：コメント2"),
-		new CharaCommentData(CharacterType.AINE,TimeType.MORNING,"アイネ:朝：コメント3"),
-		new CharaCommentData(CharacterType.AINE,TimeType.MORNING,"アイネ:朝：コメント4"),
-		new CharaCommentData(CharacterType.AINE,TimeType.NOON,"アイネ:昼：コメント"),
-		new CharaCommentData(CharacterType.AINE,TimeType.THE_EVENING,"アイネ:夕：コメント"),
-		new CharaCommentData(CharacterType.AINE,TimeType.NIGHT,"アイネ:夜：コメント"),
-		new CharaCommentData(CharacterType.AINE,TimeType.LATE_NIGHT,"アイネ:深夜：コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.MORNING,"アイネ:朝：コメント1"),
+		new CharaCommentData(CharacterType.AINE,CommentType.MORNING,"アイネ:朝：コメント2"),
+		new CharaCommentData(CharacterType.AINE,CommentType.MORNING,"アイネ:朝：コメント3"),
+		new CharaCommentData(CharacterType.AINE,CommentType.MORNING,"アイネ:朝：コメント4"),
+		new CharaCommentData(CharacterType.AINE,CommentType.NOON,"アイネ:昼：コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.THE_EVENING,"アイネ:夕：コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.NIGHT,"アイネ:夜：コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.LATE_NIGHT,"アイネ:深夜：コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.TIMER,"アイネ:再生中コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.COMMON,"アイネ:汎用コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.TIMER_SUCCESS,"アイネ:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.TIMER_FAILURE,"アイネ:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.LEAVING,"アイネ:放置時コメント"),
+		new CharaCommentData(CharacterType.AINE,CommentType.TAPPED,"アイネ:タップ時コメント"),
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.CANNON,TimeType.MORNING,"カノン:朝：コメント1"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.MORNING,"カノン:朝：コメント2"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.MORNING,"カノン:朝：コメント3"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.MORNING,"カノン:朝：コメント4"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.NOON,"カノン:昼：コメント"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.THE_EVENING,"カノン:夕：コメント"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.NIGHT,"カノン:夜：コメント"),
-		new CharaCommentData(CharacterType.CANNON,TimeType.LATE_NIGHT,"カノン:深夜：コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.MORNING,"カノン:朝：コメント1"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.MORNING,"カノン:朝：コメント2"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.MORNING,"カノン:朝：コメント3"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.MORNING,"カノン:朝：コメント4"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.NOON,"カノン:昼：コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.THE_EVENING,"カノン:夕：コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.NIGHT,"カノン:夜：コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.LATE_NIGHT,"カノン:深夜：コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.TIMER,"カノン:再生中コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.COMMON,"カノン:汎用コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.TIMER_SUCCESS,"カノン:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.TIMER_FAILURE,"カノン:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.LEAVING,"カノン:放置時コメント"),
+		new CharaCommentData(CharacterType.CANNON,CommentType.TAPPED,"カノン:タップ時コメント"),
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.MORNING,"プリマヴェーラ:朝：コメント1"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.MORNING,"プリマヴェーラ:朝：コメント2"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.MORNING,"プリマヴェーラ:朝：コメント3"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.MORNING,"プリマヴェーラ:朝：コメント4"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.NOON,"プリマヴェーラ:昼：コメント"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.THE_EVENING,"プリマヴェーラ:夕：コメント"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.NIGHT,"プリマヴェーラ:夜：コメント"),
-		new CharaCommentData(CharacterType.PLIMMAVAERHA,TimeType.LATE_NIGHT,"プリマヴェーラ:深夜：コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.MORNING,"プリマヴェーラ:朝：コメント1"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.MORNING,"プリマヴェーラ:朝：コメント2"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.MORNING,"プリマヴェーラ:朝：コメント3"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.MORNING,"プリマヴェーラ:朝：コメント4"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.NOON,"プリマヴェーラ:昼：コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.THE_EVENING,"プリマヴェーラ:夕：コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.NIGHT,"プリマヴェーラ:夜：コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.LATE_NIGHT,"プリマヴェーラ:深夜：コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.TIMER,"プリマヴェーラ:再生中コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.COMMON,"プリマヴェーラ:汎用コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.TIMER_SUCCESS,"プリマヴェーラ:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.TIMER_FAILURE,"プリマヴェーラ:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.LEAVING,"プリマヴェーラ:放置時コメント"),
+		new CharaCommentData(CharacterType.PLIMMAVAERHA,CommentType.TAPPED,"プリマヴェーラ:タップ時コメント"),
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.MORNING,"リュヌ:朝：コメント1"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.MORNING,"リュヌ:朝：コメント2"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.MORNING,"リュヌ:朝：コメント3"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.MORNING,"リュヌ:朝：コメント4"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.NOON,"リュヌ:昼：コメント"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.THE_EVENING,"リュヌ:夕：コメント"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.NIGHT,"リュヌ:夜：コメント"),
-		new CharaCommentData(CharacterType.LIEUNNE,TimeType.LATE_NIGHT,"リュヌ:深夜：コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.MORNING,"リュヌ:朝：コメント1"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.MORNING,"リュヌ:朝：コメント2"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.MORNING,"リュヌ:朝：コメント3"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.MORNING,"リュヌ:朝：コメント4"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.NOON,"リュヌ:昼：コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.THE_EVENING,"リュヌ:夕：コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.NIGHT,"リュヌ:夜：コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.LATE_NIGHT,"リュヌ:深夜：コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.TIMER,"リュヌ:再生中コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.COMMON,"リュヌ:汎用コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.TIMER_SUCCESS,"リュヌ:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.TIMER_FAILURE,"リュヌ:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.LEAVING,"リュヌ:放置時コメント"),
+		new CharaCommentData(CharacterType.LIEUNNE,CommentType.TAPPED,"リュヌ:タップ時コメント"),
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.MORNING,"ジムノペディ:朝：コメント1"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.MORNING,"ジムノペディ:朝：コメント2"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.MORNING,"ジムノペディ:朝：コメント3"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.MORNING,"ジムノペディ:朝：コメント4"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.NOON,"ジムノペディ:昼：コメント"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.THE_EVENING,"ジムノペディ:夕：コメント"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.NIGHT,"ジムノペディ:夜：コメント"),
-		new CharaCommentData(CharacterType.JEMENOPPEEDY,TimeType.LATE_NIGHT,"ジムノペディ:深夜：コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.MORNING,"ジムノペディ:朝：コメント1"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.MORNING,"ジムノペディ:朝：コメント2"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.MORNING,"ジムノペディ:朝：コメント3"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.MORNING,"ジムノペディ:朝：コメント4"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.NOON,"ジムノペディ:昼：コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.THE_EVENING,"ジムノペディ:夕：コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.NIGHT,"ジムノペディ:夜：コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.LATE_NIGHT,"ジムノペディ:深夜：コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.TIMER,"ジムノペディ:再生中コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.COMMON,"ジムノペディ:汎用コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.TIMER_SUCCESS,"ジムノペディ:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.TIMER_FAILURE,"ジムノペディ:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.LEAVING,"ジムノペディ:放置時コメント"),
+		new CharaCommentData(CharacterType.JEMENOPPEEDY,CommentType.TAPPED,"ジムノペディ:タップ時コメント"),
+
+
 		//----------------------------------
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.MORNING,"ハルノウミ:朝：コメント1"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.MORNING,"ハルノウミ:朝：コメント2"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.MORNING,"ハルノウミ:朝：コメント3"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.MORNING,"ハルノウミ:朝：コメント4"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.NOON,"ハルノウミ:昼：コメント"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.THE_EVENING,"ハルノウミ:夕：コメント"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.NIGHT,"ハルノウミ:夜：コメント"),
-		new CharaCommentData(CharacterType.HALNAUMY,TimeType.LATE_NIGHT,"ハルノウミ:深夜：コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.MORNING,"ハルノウミ:朝：コメント1"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.MORNING,"ハルノウミ:朝：コメント2"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.MORNING,"ハルノウミ:朝：コメント3"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.MORNING,"ハルノウミ:朝：コメント4"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.NOON,"ハルノウミ:昼：コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.THE_EVENING,"ハルノウミ:夕：コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.NIGHT,"ハルノウミ:夜：コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.LATE_NIGHT,"ハルノウミ:深夜：コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.TIMER,"ハルノウミ:再生中コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.COMMON,"ハルノウミ:汎用コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.TIMER_SUCCESS,"ハルノウミ:タイマー成功時コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.TIMER_FAILURE,"ハルノウミ:タイマー失敗時コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.LEAVING,"ハルノウミ:放置時コメント"),
+		new CharaCommentData(CharacterType.HALNAUMY,CommentType.TAPPED,"ハルノウミ:タップ時コメント"),
+
 		//----------------------------------
 	};
 	/// <summary>

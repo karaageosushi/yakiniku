@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class CharacterImageSelector : MonoBehaviour {
 
@@ -30,11 +31,25 @@ public class CharacterImageSelector : MonoBehaviour {
 			mCurrentChara = PrefabFolder.InstantiateTo<CharaSettingData> (target,this.transform);
 			mCurrentChara.transform.localPosition = new Vector3(mCharaPostionX,mCharaPostionY);
 			mCurrentChara.transform.localScale = new Vector3 (mCharaScale,mCharaScale,1);
+			var button = mCurrentChara.gameObject.AddComponent<Button> ();
+			button.onClick.AddListener (()=>{
+				OnClickCharacter(mCurrentChara.Charatype);
+			});
 		}
 
 
 		//CharacterImages.ForEach (c=>c.gameObject.SetActive(false));
 		//CharacterImages [(int)type].gameObject.SetActive (true);
+	}
+	Action<CharacterType> mCharaTapCallBack;
+	public void SetCharaTapEvent(Action<CharacterType> callback){
+		mCharaTapCallBack = callback;
+	}
+
+	void OnClickCharacter(CharacterType chara){
+		if (mCharaTapCallBack != null) {
+			mCharaTapCallBack (chara);
+		}
 	}
 
 	// Use this for initialization

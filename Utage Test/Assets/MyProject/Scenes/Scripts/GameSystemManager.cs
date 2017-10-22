@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SoundUtil;
+using UniRx;
+using UniRx.Triggers;
 
 public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 
@@ -18,6 +20,28 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 			return mDialogEmmiter;
 		}
 	}
+
+	Stack<BaseScene> mSceneHistory = new Stack<BaseScene>();
+	public Stack<BaseScene> SceneHistory{
+		get{
+			return mSceneHistory;
+		}
+	}
+
+	BaseScene mCurrentScene;
+	public BaseScene CurrentScene{
+		get{
+			return mCurrentScene;
+		}
+	}
+
+	ReactiveProperty<bool> mIsMainScene = new ReactiveProperty<bool>();
+	public ReactiveProperty<bool> IsMainScene{
+		get{
+			return mIsMainScene;
+		}
+	}
+
 
 	[ContextMenu("デバッグで初期情報をセット！")]
 	public void SetEarlyUserData(){

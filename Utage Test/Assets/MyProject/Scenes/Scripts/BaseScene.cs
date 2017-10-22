@@ -26,7 +26,8 @@ public class BaseScene : MonoBehaviour {
 			Debug.Log ("OnCompleteOpen:"+this.gameObject.name);
 			mOpenCallback();
 		}).SetEase(Ease.InOutQuad);
-
+		GameSystemManager.Instance.SceneHistory.Push (this);
+		GameSystemManager.Instance.IsMainScene.Value = (GameSystemManager.Instance.SceneHistory.Count == 1);
 		SoundManager.Instance.PlaySe (0);
 
 	}
@@ -42,7 +43,9 @@ public class BaseScene : MonoBehaviour {
 			Debug.Log ("OnCompleteClose:"+this.gameObject.name);
 			mCloseCallback();
 		}).SetEase(Ease.InOutQuad);
-
+		GameSystemManager.Instance.SceneHistory.Pop();
+		//現在シーンがメインシーンか否か判定
+		GameSystemManager.Instance.IsMainScene.Value = (GameSystemManager.Instance.SceneHistory.Count == 1);
 		SoundManager.Instance.PlaySe (1);
 
 	}

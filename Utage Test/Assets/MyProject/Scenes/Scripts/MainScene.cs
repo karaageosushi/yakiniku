@@ -8,7 +8,22 @@ using UniRx;
 using UniRx.Triggers;
 using System;
 
-public class MainScene : MonoBehaviour {
+public class CharaCommentFlags{
+	public bool mIsSuccessedTimer = false;
+	public bool mIsFailuredTimer = false;
+	public bool mIsTaped = false;
+	public bool mIsLeaved = false;
+
+	public void ResetFlags(){
+		mIsSuccessedTimer = false;
+		mIsFailuredTimer = false;
+		mIsTaped = false;
+		mIsLeaved = false;
+	}
+
+}
+
+public class MainScene : BaseScene {
 	[SerializeField]
 	MusicSelectScene mMusicSelectScene;
 	[SerializeField]
@@ -37,6 +52,10 @@ public class MainScene : MonoBehaviour {
 	GetRewordDialog mGetRewordDialog;
 	[SerializeField]
 	DebugScene mDebugScene;
+	[SerializeField]
+	GameObject mTransferOtherScreens;
+
+	CharaCommentFlags mCharaCommentFlags =new CharaCommentFlags();
 
 	const int MIN_TO_MONEY = 2;
 
@@ -71,12 +90,39 @@ public class MainScene : MonoBehaviour {
 		mSettingScene.Open ();
 	}
 
+	float mLeavingTimer=0;
 	void Start () {
+		GameSystemManager.Instance.SceneHistory.Push (this);
 		UpdateMainDisplay ();
 		//スライドのイベント登録
 		mMusicSlider.onValueChanged.AddListener((value) => {
 			mMusciValFillImage.fillAmount = value;
 			mTimeLabel.text = new FroatToMinUtil().FroatToMin((MAX_MUSIC_TIME*value));
+		});
+		//放置時の処理を行う
+		GameSystemManager.Instance.IsMainScene.Subscribe(isMain=>{
+			if(isMain){
+				//メインシーンに入ったタイミングで起動
+				UpdateMainDisplay();
+				this.UpdateAsObservable().Subscribe(_=>{
+					mLeavingTimer += Time.deltaTime;
+					if(mLeavingTimer >= 30){
+						if(!mIsPlayCharacterMusic){
+							mCharaCommentFlags.mIsLeaved = true;
+							UpdateMainDisplay();
+						}
+						mLeavingTimer = 0;
+					}
+				}).AddTo(this.gameObject);
+			}else{
+				//メインシーンを離れたタイミングで起動
+				mLeavingTimer=0;
+			}
+		}).AddTo(this.gameObject);
+		GameSystemManager.Instance.IsMainScene.Value = true;
+		mCharacterImageSelector.SetCharaTapEvent ((chara)=>{
+			mCharaCommentFlags.mIsTaped = true;
+			UpdateMainDisplay();
 		});
 	}
 
@@ -95,11 +141,65 @@ public class MainScene : MonoBehaviour {
 		mCharacterImageSelector.ShowCharactor (selectChara);
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara].mCharaName;
 		UpDateLovePointLabel();
-		//現在のキャラクターのコメントを取得
-		var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mTime == TimeUtil.GetCurrentTimeType()).ToList();
-		int rand = UnityEngine.Random.Range (0,currentCharaCommentList.Count);
-		string comment = currentCharaCommentList[rand].mComment;
-		mCharaCommentLabel.text = comment;
+		//コメント更新
+		UpdateCharaComment ();
+	}
+
+	/// <summary>
+	/// キャラのコメントをアップデート
+	/// </summary>
+	void UpdateCharaComment(){
+		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
+		//通常時
+		{
+			//現在のキャラクターのコメントを取得
+			var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where (cd => cd.mChara == selectChara).Where (cd => cd.mCommentType == TimeUtil.GetCurrentTimeType () || cd.mCommentType == CommentType.COMMON).ToList ();
+			Debug.Log (TimeUtil.GetCurrentTimeType ());
+			int rand = UnityEngine.Random.Range (0, currentCharaCommentList.Count);
+			string comment = currentCharaCommentList [rand].mComment;
+			mCharaCommentLabel.text = comment;
+		}
+
+		//放置時
+		if (mCharaCommentFlags.mIsLeaved) {
+			var targetCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.LEAVING).ToList();
+			int rand = UnityEngine.Random.Range (0,targetCommentList.Count);
+			string comment = targetCommentList[rand].mComment;
+			mCharaCommentLabel.text = comment;
+		}
+
+		//音楽再生時
+		if (mIsPlayCharacterMusic) {
+			//音楽再生時のコメントを取得
+			var currentCharaMusicTimeCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.TIMER).ToList();
+			int musicRand = UnityEngine.Random.Range (0,currentCharaMusicTimeCommentList.Count);
+			string musicComment = currentCharaMusicTimeCommentList[musicRand].mComment;
+			mCharaCommentLabel.text = musicComment;
+		}
+		//キャラタップ時
+		if (mCharaCommentFlags.mIsTaped) {
+			var targetCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.TAPPED).ToList();
+			int rand = UnityEngine.Random.Range (0,targetCommentList.Count);
+			string comment = targetCommentList[rand].mComment;
+			mCharaCommentLabel.text = comment;
+		}
+		//音楽再生失敗時
+		if (mCharaCommentFlags.mIsFailuredTimer) {
+			var targetCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.TIMER_FAILURE).ToList();
+			int rand = UnityEngine.Random.Range (0,targetCommentList.Count);
+			string comment = targetCommentList[rand].mComment;
+			mCharaCommentLabel.text = comment;
+		}
+		//音楽再生成功時
+		if (mCharaCommentFlags.mIsSuccessedTimer) {
+			var targetCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.TIMER_SUCCESS).ToList();
+			int rand = UnityEngine.Random.Range (0,targetCommentList.Count);
+			string comment = targetCommentList[rand].mComment;
+			mCharaCommentLabel.text = comment;
+		}
+
+		//フラグをリセット
+		mCharaCommentFlags.ResetFlags ();
 	}
 
 	/// <summary>
@@ -111,8 +211,10 @@ public class MainScene : MonoBehaviour {
 		SoundManager.Instance.PlayBgm ((int)selectChara);
 		mIsPlayCharacterMusic = true;
 		UpdateMusicButtonDisPlay ();
+		UpdateMainDisplay ();
 		mSetiingTimeSnapShot = SetiingTime;
 		float currentMusicTime = 0;
+		mTransferOtherScreens.gameObject.SetActive (false);
 		//mMusicDisposableUpdateTrigger = new GameObject ("mMusicDisposableUpdateTrigger");
 		mMusicDisposableUpdate = this.UpdateAsObservable().Subscribe(_=>{
 			if(SoundManager.Instance.mCurrentPlayBgm.clip == null)return;
@@ -128,9 +230,10 @@ public class MainScene : MonoBehaviour {
 				mGetRewordDialog.Init(rewordVal);
 				GameSystemManager.Instance.UserData.mMoney += rewordVal;
 				//表示を更新
-				UpDateLovePointLabel();
+				//UpDateLovePointLabel();
 				//データをSave
 				SaveData.SaveUserData ();
+				mCharaCommentFlags.mIsSuccessedTimer = true;
 				StopCurrentSelectedCharacterMusic();
 			}
 		});
@@ -147,6 +250,10 @@ public class MainScene : MonoBehaviour {
 		SoundManager.Instance.StopBgm ();
 		mIsPlayCharacterMusic = false;
 		UpdateMusicButtonDisPlay ();
+
+		mTransferOtherScreens.gameObject.SetActive (true);
+		//メイン画面の表示を行う
+		UpdateMainDisplay ();
 	}
 }
 
