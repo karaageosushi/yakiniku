@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1106c9d6742c34024b0a66c04dc57222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mCharaCutinPosX: 156.89
-  mCharaCutinPosY: -307.8
+  mCharaCutinPosX: 112
+  mCharaCutinPosY: -250.1
 --- !u!114 &114538390183440566
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -17,10 +17,16 @@ public class MusicSelectScene : BaseScene {
 	[SerializeField]
 	GridLayoutGroup mGrid;
 	List<MusicItem> mItemLsit = new List<MusicItem>();
+	[SerializeField]
+	BonusScene mBonusScene;
 
 	public void OpenEpisodeDialog(CharacterType chara ){
 		mEpisodeDialog.Init (CharacterMasterData.CharaEpsodeDataList.Where(c => c.mChara == chara).ToList());
 		mEpisodeDialog.Open ();
+	}
+
+	public void OpenBonusScene(){
+		mBonusScene.Open ();
 	}
 
 	// Use this for initialization

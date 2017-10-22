@@ -50,6 +50,8 @@
      <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BaseScene.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\BonusItem.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\BonusScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\CharaDetaileScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\CharaSettingData.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\CharacterImageSelector.cs" />
@@ -65,6 +67,7 @@
      <Compile Include="Assets\MyProject\Scenes\Scripts\GameSystemManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MainScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MasterData\CharacterMasterData.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\MasterData\GameMasterData.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MusicItem.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\MusicSelectScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\PrefabFolder.cs" />
