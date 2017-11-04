@@ -4,6 +4,7 @@ using UnityEngine;
 using SoundUtil;
 using UniRx;
 using UniRx.Triggers;
+using System.Runtime.InteropServices;
 
 public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 
@@ -97,6 +98,29 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (mIsBackGround.Value) {
+			mBackGroundTime += Time.deltaTime;
+		} else {
+			mBackGroundTime = 0;
+		}
 	}
+
+	float mBackGroundTime = 0;
+	public float BackGroundTime{
+		get{
+			return mBackGroundTime;
+		}
+	}
+	//public bool mIsPlayMusic = false;
+	ReactiveProperty<bool> mIsBackGround = new ReactiveProperty<bool>(false);
+	public ReactiveProperty<bool> IsBackGround{
+		get{
+			return mIsBackGround;
+		}
+	}
+
+
+
+
+
 }

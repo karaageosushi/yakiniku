@@ -8,6 +8,7 @@ public class PrefabFolder {
 		//script.transform.parent = parent;
 		script.transform.SetParent (parent);
 		script.transform.localPosition = Vector3.zero;
+		script.transform.localScale = Vector3.one;
 		return script;
 	}
 	public static T InstantiateTo<T>(GameObject obj,Transform parent)where T : Component{
@@ -15,6 +16,7 @@ public class PrefabFolder {
 		//script.transform.parent = parent;
 		script.transform.SetParent (parent);
 		script.transform.localPosition = Vector3.zero;
+		script.transform.localScale = Vector3.one;
 		return script;
 	}
 	public static T ResourcesLoadInstantiateTo<T>(string path,Transform parent)where T : Component{
@@ -24,6 +26,7 @@ public class PrefabFolder {
 		//script.transform.parent = parent;
 		script.transform.SetParent (parent);
 		script.transform.localPosition = Vector3.zero;
+		script.transform.localScale = Vector3.one;
 		return script;
 	}
 }

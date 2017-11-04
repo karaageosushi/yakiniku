@@ -157,6 +157,10 @@ public class SoundManager : SingletonMonoBehaviour< SoundManager > {
 		bgmSource.clip = null;
 	}
 
+	public void StopBgmFromiOS(string name){
+		bgmSource.Stop();
+		bgmSource.clip = null;
+	}
 	//------------------------------------------------------------------------------
 	public void PlaySe( string name )
 	{

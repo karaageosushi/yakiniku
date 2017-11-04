@@ -58,7 +58,7 @@ public class MainScene : BaseScene {
 	CharaCommentFlags mCharaCommentFlags =new CharaCommentFlags();
 
 	const int MIN_TO_MONEY = 2;
-
+	const float BACKGROUND_WAITING_TIME = 5;
 	bool mIsPlayCharacterMusic = false;
 	//最大再生時間
 	const float MAX_MUSIC_TIME = 7200.0f;
@@ -224,6 +224,13 @@ public class MainScene : BaseScene {
 			//緑色のながさを変える処理を入れる
 			var fillVal = remainingTime/MAX_MUSIC_TIME;
 			mMusciValFillImage.fillAmount = fillVal;
+
+			//バックグラウンドに移行したりして失敗した場合
+			if(GameSystemManager.Instance.BackGroundTime >= BACKGROUND_WAITING_TIME){
+				//失敗する！
+				MakeFailedMusic();
+			}
+
 			if(remainingTime <= 0){
 				//ここに報酬獲得の処理を入れる
 				var rewordVal = new FroatToMinUtil().FromToMinVal(mSetiingTimeSnapShot)*MIN_TO_MONEY;
@@ -242,6 +249,13 @@ public class MainScene : BaseScene {
 
 	public void UpDateLovePointLabel(){
 		mLovePointLabel.text = ""+GameSystemManager.Instance.UserData.mMoney;
+	}
+
+	//音楽の再生に失敗した場合
+	public void MakeFailedMusic(){
+		//失敗フラグを入れる
+		mCharaCommentFlags.mIsFailuredTimer = true;
+		StopCurrentSelectedCharacterMusic ();
 	}
 
 	public void StopCurrentSelectedCharacterMusic(){
