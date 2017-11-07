@@ -49,7 +49,7 @@ public class EpisodeSelectDialog : DialogBase {
 
 	// Use this for initialization
 	void Start () {
-		
+		Close ();
 	}
 
 }

@@ -48,11 +48,11 @@ public class DialogBase : MonoBehaviour {
 		Open (null);
 	}
 
-
+	//public bool mRejectAwakeClose = false;
 
 	protected virtual void Awake () {
 		mRect = this.GetComponent<RectTransform> ();
-		Close ();
+		//if(!mRejectAwakeClose) Close ();
 	}
 
 

@@ -45,6 +45,7 @@ public class EpisodeItem : MonoBehaviour {
 		mButton.onClick.AddListener (()=>{
 			//解放されていないが解放可能な状態でタップした場合の処理を記載
 			var dialog = PrefabFolder.InstantiateTo<EpsodeReleaseDialog>(mEpsodeReleaseDialogPrefab,GameSystemManager.Instance.DialogEmmiter);
+			//dialog.mRejectAwakeClose = true;
 			dialog.Init(mCharaEpisodeData,this,()=>{
 				mParentDialog.UpdateList();
 			});

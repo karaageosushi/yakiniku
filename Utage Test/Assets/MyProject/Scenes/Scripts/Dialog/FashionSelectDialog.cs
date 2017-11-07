@@ -39,6 +39,6 @@ public class FashionSelectDialog : DialogBase {
 
 	// Use this for initialization
 	void Start () {
-		
+		Close ();
 	}
 }

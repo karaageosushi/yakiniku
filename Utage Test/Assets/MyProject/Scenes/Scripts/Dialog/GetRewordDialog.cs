@@ -15,7 +15,7 @@ public class GetRewordDialog : DialogBase {
 
 	// Use this for initialization
 	void Start () {
-		
+		Close ();
 	}
 	
 	// Update is called once per frame
