@@ -45,6 +45,8 @@ UIApplicationState state = [[UIApplication sharedApplication] applicationState];
             NSError* error = nil;
             AVAudioSession* session = [AVAudioSession sharedInstance];
             [session setCategory:AVAudioSessionCategorySoloAmbient error:&error];
+            //失敗通知をUnityへ送っておく
+            UnitySendMessage("GameSystemManager", "SendFailure", "");
             
         } else {
             NSLog(@"Sent to background by locking screen");

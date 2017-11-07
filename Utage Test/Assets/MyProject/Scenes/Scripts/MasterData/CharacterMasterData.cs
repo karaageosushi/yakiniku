@@ -78,6 +78,18 @@ public struct CharaFashionData{
 		mName = name;
 	}
 }
+public struct CharaPostionData{
+	public CharacterType mChara;
+	public Vector2 mPostion;
+
+	public CharaPostionData(
+		CharacterType chara,
+		Vector2 postion
+	){
+		mChara = chara;
+		mPostion = postion;
+	}
+}
 
 
 
@@ -311,6 +323,25 @@ public class CharacterMasterData {
 		new CharaCommentData(CharacterType.HALNAUMY,CommentType.TAPPED,"ハルノウミ:タップ時コメント"),
 
 		//----------------------------------
+	};
+	/// <summary>
+	/// TOPでのキャラクターの座標指定データ
+	/// </summary>
+	public static List<CharaPostionData> CharaTopPostionList = new List<CharaPostionData> () {
+		new CharaPostionData (CharacterType.MNOINE, new Vector2(-100,-168)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.AINE, new Vector2(-100,-168)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.CANNON, new Vector2(-9.14f,-279.2f)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.PLIMMAVAERHA, new Vector2(-100,-168)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.LIEUNNE, new Vector2(-55,-267.4f)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.JEMENOPPEEDY, new Vector2(38.1f,-254.2f)),
+		//---------------------------------------------------
+		new CharaPostionData (CharacterType.HALNAUMY, new Vector2(-70,-168)),
+		//---------------------------------------------------
 	};
 	/// <summary>
 	/// キャラクターのファッションデータ

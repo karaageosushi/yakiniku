@@ -6808,6 +6808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDialogEmmiter: {fileID: 904749102}
+  mMainScene: {fileID: 539497965}
 --- !u!4 &1078354005
 Transform:
   m_ObjectHideFlags: 0
@@ -8332,7 +8333,7 @@ MonoBehaviour:
     mute: 0
   seClips:
   - {fileID: 8300000, guid: 9fce72684d60d419584a47d0a2dd67da, type: 3}
-  - {fileID: 8300000, guid: c5075dad0fefe43caa7b608d1774c95b, type: 3}
+  - {fileID: 8300000, guid: a24b3fb2b1e8e4b329435b581c32d0e6, type: 3}
   bgmClips:
   - {fileID: 8300000, guid: 546fa94223c214eaa928c0b5b896b880, type: 3}
   - {fileID: 8300000, guid: 4b3e9698f5cda465eaf9e622cd94ee31, type: 3}
@@ -8806,8 +8807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 1280}
+  m_AnchoredPosition: {x: 0, y: 0.00018310547}
+  m_SizeDelta: {x: 800, y: 1420.0004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493757562
 MonoBehaviour:

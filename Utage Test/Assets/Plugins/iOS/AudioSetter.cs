@@ -24,7 +24,9 @@ public class AudioSetter:MonoBehaviour {
 	{
 		Debug.Log("OnApplicationFocus:" + hasFocus);
 		if(hasFocus){
+			#if UNITY_IOS && !UNITY_EDITOR
 			_ReSetiOSBackGroundAudio ();
+			#endif
 		}
 	}
 

@@ -48,7 +48,12 @@ public class DialogBase : MonoBehaviour {
 		Open (null);
 	}
 
+
+
 	protected virtual void Awake () {
 		mRect = this.GetComponent<RectTransform> ();
+		Close ();
 	}
+
+
 }

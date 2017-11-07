@@ -97,15 +97,23 @@ public class MainScene : BaseScene {
 		//スライドのイベント登録
 		mMusicSlider.onValueChanged.AddListener((value) => {
 			mMusciValFillImage.fillAmount = value;
-			mTimeLabel.text = new FroatToMinUtil().FroatToMin((MAX_MUSIC_TIME*value));
+			//mTimeLabel.text = new FroatToMinUtil().FroatToMin((MAX_MUSIC_TIME*value));
+			mTimeLabel.text = new FroatToMinUtil().FroatToMin((SetiingTime));
 		});
 		//放置時の処理を行う
 		GameSystemManager.Instance.IsMainScene.Subscribe(isMain=>{
+			
+
 			if(isMain){
 				//メインシーンに入ったタイミングで起動
 				UpdateMainDisplay();
 				this.UpdateAsObservable().Subscribe(_=>{
-					mLeavingTimer += Time.deltaTime;
+					//Debug.Log(mLeavingTimer+":"+GameSystemManager.Instance.IsMainScene.Value);
+					if(GameSystemManager.Instance.IsMainScene.Value&&!mIsPlayCharacterMusic){
+						mLeavingTimer += Time.deltaTime;
+					}else{
+						mLeavingTimer=0;
+					}
 					if(mLeavingTimer >= 30){
 						if(!mIsPlayCharacterMusic){
 							mCharaCommentFlags.mIsLeaved = true;
@@ -137,7 +145,7 @@ public class MainScene : BaseScene {
 	public void UpdateMainDisplay(){
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
 		AudioClip selectCharaAudio = SoundManager.Instance.GetAudioClipFromIndex ((int)selectChara);
-		mTimeLabel.text = new FroatToMinUtil().FroatToMin(selectCharaAudio.length);
+		mTimeLabel.text = new FroatToMinUtil().FroatToMin((SetiingTime));
 		mCharacterImageSelector.ShowCharactor (selectChara);
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara].mCharaName;
 		UpDateLovePointLabel();
@@ -154,7 +162,6 @@ public class MainScene : BaseScene {
 		{
 			//現在のキャラクターのコメントを取得
 			var currentCharaCommentList = CharacterMasterData.CharaCommentDataList.Where (cd => cd.mChara == selectChara).Where (cd => cd.mCommentType == TimeUtil.GetCurrentTimeType () || cd.mCommentType == CommentType.COMMON).ToList ();
-			Debug.Log (TimeUtil.GetCurrentTimeType ());
 			int rand = UnityEngine.Random.Range (0, currentCharaCommentList.Count);
 			string comment = currentCharaCommentList [rand].mComment;
 			mCharaCommentLabel.text = comment;
@@ -225,16 +232,13 @@ public class MainScene : BaseScene {
 			var fillVal = remainingTime/MAX_MUSIC_TIME;
 			mMusciValFillImage.fillAmount = fillVal;
 
-			//バックグラウンドに移行したりして失敗した場合
-			if(GameSystemManager.Instance.BackGroundTime >= BACKGROUND_WAITING_TIME){
-				//失敗する！
-				MakeFailedMusic();
-			}
 
 			if(remainingTime <= 0){
 				//ここに報酬獲得の処理を入れる
 				var rewordVal = new FroatToMinUtil().FromToMinVal(mSetiingTimeSnapShot)*MIN_TO_MONEY;
-				mGetRewordDialog.Init(rewordVal);
+				if(rewordVal != 0){
+					mGetRewordDialog.Init(rewordVal);
+				}
 				GameSystemManager.Instance.UserData.mMoney += rewordVal;
 				//表示を更新
 				//UpDateLovePointLabel();

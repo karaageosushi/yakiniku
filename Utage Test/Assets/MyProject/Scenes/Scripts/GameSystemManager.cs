@@ -43,6 +43,9 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 		}
 	}
 
+	[SerializeField]
+	MainScene mMainScene;
+
 
 	[ContextMenu("デバッグで初期情報をセット！")]
 	public void SetEarlyUserData(){
@@ -119,8 +122,27 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 		}
 	}
 
-
-
-
+	bool mIsFailed = false;
+	public bool IsFailed{
+		get{
+			return mIsFailed;
+		}
+	}
+	/// <summary>
+	/// 失敗通知をネイティブ側から受け取る
+	/// </summary>
+	public void SendFailure(string message){
+		mIsFailed = true;
+		//BGMを止める
+		mMainScene.MakeFailedMusic();
+		//SoundManager.Instance.StopBgm();
+	}
+	/// <summary>
+	/// フラグをリセット
+	/// </summary>
+	/// <param name="message">Message.</param>
+	public void ResetFailedFlag(string message){
+		mIsFailed = false;
+	}
 
 }
