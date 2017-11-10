@@ -12,13 +12,13 @@ public class CharaCommentFlags{
 	public bool mIsSuccessedTimer = false;
 	public bool mIsFailuredTimer = false;
 	public bool mIsTaped = false;
-	public bool mIsLeaved = false;
+	//public bool mIsLeaved = false;
 
 	public void ResetFlags(){
 		mIsSuccessedTimer = false;
 		mIsFailuredTimer = false;
 		mIsTaped = false;
-		mIsLeaved = false;
+		//mIsLeaved = false;
 	}
 
 }
@@ -91,7 +91,18 @@ public class MainScene : BaseScene {
 	}
 
 	float mLeavingTimer=0;
+	const float LEAVING_TIMER_COUNT = 30;
+	bool SetUpedMainScene = false;
+
 	void Start () {
+		//ゲームシーンのセットアップを行う
+		if (!SetUpedMainScene) {
+			SetUpedMainScene = true;
+			SetUpMainScene ();
+		}
+	}
+
+	void SetUpMainScene(){
 		GameSystemManager.Instance.SceneHistory.Push (this);
 		UpdateMainDisplay ();
 		//スライドのイベント登録
@@ -101,32 +112,33 @@ public class MainScene : BaseScene {
 			mTimeLabel.text = new FroatToMinUtil().FroatToMin((SetiingTime));
 		});
 		//放置時の処理を行う
-		GameSystemManager.Instance.IsMainScene.Subscribe(isMain=>{
-			
-
+		GameSystemManager.Instance.IsMainScene.Subscribe(isMain=>{			
 			if(isMain){
+				//Debug.Log("メインシーンに入ったタイミングで起動");
 				//メインシーンに入ったタイミングで起動
 				UpdateMainDisplay();
-				this.UpdateAsObservable().Subscribe(_=>{
-					//Debug.Log(mLeavingTimer+":"+GameSystemManager.Instance.IsMainScene.Value);
-					if(GameSystemManager.Instance.IsMainScene.Value&&!mIsPlayCharacterMusic){
-						mLeavingTimer += Time.deltaTime;
-					}else{
-						mLeavingTimer=0;
-					}
-					if(mLeavingTimer >= 30){
-						if(!mIsPlayCharacterMusic){
-							mCharaCommentFlags.mIsLeaved = true;
-							UpdateMainDisplay();
-						}
-						mLeavingTimer = 0;
-					}
-				}).AddTo(this.gameObject);
 			}else{
 				//メインシーンを離れたタイミングで起動
 				mLeavingTimer=0;
 			}
 		}).AddTo(this.gameObject);
+
+		this.UpdateAsObservable().Subscribe(_=>{
+			//Debug.Log(mLeavingTimer+":"+GameSystemManager.Instance.IsMainScene.Value);
+			if(GameSystemManager.Instance.IsMainScene.Value&&!mIsPlayCharacterMusic){
+				mLeavingTimer += Time.deltaTime;
+			}else{
+				mLeavingTimer=0;
+			}
+			if(mLeavingTimer >= LEAVING_TIMER_COUNT){
+				if(!mIsPlayCharacterMusic){
+					//mCharaCommentFlags.mIsLeaved = true;
+					UpdateMainDisplay();
+				}
+				mLeavingTimer = 0;
+			}
+		}).AddTo(this.gameObject);
+
 		GameSystemManager.Instance.IsMainScene.Value = true;
 		mCharacterImageSelector.SetCharaTapEvent ((chara)=>{
 			mCharaCommentFlags.mIsTaped = true;
@@ -168,7 +180,7 @@ public class MainScene : BaseScene {
 		}
 
 		//放置時
-		if (mCharaCommentFlags.mIsLeaved) {
+		if (mLeavingTimer >= LEAVING_TIMER_COUNT) {
 			var targetCommentList = CharacterMasterData.CharaCommentDataList.Where(cd=>cd.mChara == selectChara).Where(cd=>cd.mCommentType == CommentType.LEAVING).ToList();
 			int rand = UnityEngine.Random.Range (0,targetCommentList.Count);
 			string comment = targetCommentList[rand].mComment;

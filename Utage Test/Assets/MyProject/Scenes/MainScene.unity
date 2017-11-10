@@ -3564,8 +3564,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1493757561}
-  - {fileID: 640904546}
   - {fileID: 292955402}
+  - {fileID: 640904546}
   - {fileID: 1125145702}
   - {fileID: 1688424034}
   - {fileID: 1441600832}
@@ -4040,7 +4040,7 @@ Transform:
   - {fileID: 13071408}
   - {fileID: 2129264086}
   m_Father: {fileID: 539497963}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663932540
 GameObject:
@@ -7216,7 +7216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4713489833207228, guid: bcbe60add519644fd8826a8337d7a593, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcbe60add519644fd8826a8337d7a593, type: 2}
