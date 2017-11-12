@@ -53,8 +53,6 @@ UIApplicationState state = [[UIApplication sharedApplication] applicationState];
         }
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"kDisplayStatusLocked"];
     }
-    
-    
 }
 
 @end

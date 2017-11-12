@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{006AC6DB-9DD1-745C-CA4F-B13065AD3C08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-UnityScript</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_VIDEO;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNIG;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity_5/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity_5/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_AntiTransRimShaderInOut.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_TransRimShaderFader.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_TransRimShaderInOut.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_TransRimShaderIrisator.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_UVScroller.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_animRandomizer.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_animSpeedRandomizer.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_destroyThisTimed.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_effectCaster.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_materialAlphaFader.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_materialColorRandomizer.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_moveThis.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_prefabGenerator.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_randoMMoveInBox.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_randomRotation.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_randomScale.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_rotateThis.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_stohasticArrowMovement.js" />
+     <Compile Include="Assets\ShurikenMagic\Scripts\SM_trailFade.js" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Blur.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\RuleFade\Utage-UI-RuleFade.shader" />
+     <None Include="Assets\Utage\LocalizeText\SystemText.txt" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-NegaPosi.shader" />
+     <None Include="Assets\Utage\Sample\ParticleExamples\SurfaceShader_VC.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\readme.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme_ja.txt" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-MotionBlur.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Bloom.shader" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme.txt" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Fisheye.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Vortex.shader" />
+     <None Include="Assets\ShurikenMagic\Shaders\SM_TransparentAntiRim.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-RenderTexture.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\RendetTexture\Utage-DrawByRenderTexture.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Sepiatone.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Twirl.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaMain.cginc" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-ColorFade.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaSkin.cginc" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+     <None Include="Assets\Utage\Editor\NPOI\Release Notes.txt" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+     <None Include="Assets\Utage\LocalizeText\ExampleText.txt" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Grayscale.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+     <None Include="Assets\ShurikenMagic\Shaders\Illumin-VertexLit.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\ImageEffect\Utage-ImageEffect-Mosaic.shader" />
+     <None Include="Assets\Utage\Scripts\GameLib\iTween\Plugins\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\CharaOutline.cginc" />
+     <None Include="Assets\MyProject\Scenes\Scripts\UniRx\ReadMe.txt" />
+     <None Include="Assets\Utage\ReadMe.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\BGM\GameMusicPack_SUITE\Readme.txt" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+     <None Include="Assets\Utage\Sample\UnityChan\SD_unitychan\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+     <None Include="Assets\Utage\Editor\NPOI\Read Me.txt" />
+     <None Include="Assets\MyProject\Resources\MyProject\Sound\SE\Misc Game UI &amp; Menu sound FX Pack\readme_ja.txt" />
+     <None Include="Assets\Utage\LocalizeText\ErrorMsg.txt" />
+     <None Include="Assets\Utage\LocalizeText\AdvErrorMsg.txt" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\GrabPass\Utage-GrabPass-Mosaic.shader" />
+     <None Include="Assets\ShurikenMagic\Shaders\SM_2sided_transparent.shader" />
+     <None Include="Assets\Utage\Resources\Utage-Shader\CrossFade\Utage-CrossFadeImage.shader" />
+     <None Include="Assets\Utage\Sample\ReadMe.txt" />
+     <None Include="Assets\ShurikenMagic\Shaders\SM_TransparentRim.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/user/Desktop/SugiyamaSanData/yakiniku/Utage Test/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{91E5B3DF-85CD-F548-1E43-BC781280A215}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

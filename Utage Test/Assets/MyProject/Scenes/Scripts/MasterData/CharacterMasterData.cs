@@ -242,6 +242,7 @@ public class CharacterMasterData {
 		new CharaCommentData(CharacterType.AINE,CommentType.TAPPED,"アイネ:タップ時コメント"),
 
 		//----------------------------------
+
 		new CharaCommentData(CharacterType.CANNON,CommentType.COMMON,"おかえり、指揮者\nさあ、第一楽章をはじめようか"),
 		new CharaCommentData(CharacterType.CANNON,CommentType.COMMON,"君の声が聞こえたよ\nまた素敵な音を聞かせてくれるかい"),
 		new CharaCommentData(CharacterType.CANNON,CommentType.COMMON,"また会えたね\n君と過ごせる時間が楽しみだよ"),
