@@ -6,9 +6,11 @@ public class AudioSetter:MonoBehaviour {
 	[DllImport("__Internal")]
 	private static extern void _SetiOSBackGroundAudio ();
 	[DllImport("__Internal")]
-	private static extern void _GotoBackGround ();
+	private static extern void _GotoBackGround (string time);
 	[DllImport("__Internal")]
-	private static extern void _ReturnBackGround ();
+	private static extern void _DisposeTimer (string time);
+	[DllImport("__Internal")]
+	private static extern void _ReturnBackGround (string time);
 	[DllImport("__Internal")]
 	private static extern void _ReSetiOSBackGroundAudio ();
 	/// <summary>
@@ -23,11 +25,6 @@ public class AudioSetter:MonoBehaviour {
 	private void OnApplicationFocus( bool hasFocus )
 	{
 		Debug.Log("OnApplicationFocus:" + hasFocus);
-		if(hasFocus){
-			#if UNITY_IOS && !UNITY_EDITOR
-			_ReSetiOSBackGroundAudio ();
-			#endif
-		}
 	}
 
 	void OnApplicationPause (bool pauseStatus)
@@ -47,6 +44,17 @@ public class AudioSetter:MonoBehaviour {
 */
 	private void OnApplicationQuit() {
 		Debug.Log("OnApplicationQuit");
+	}
+
+	public static void SetMusicTimer(string time){
+		#if UNITY_IOS && !UNITY_EDITOR
+		_GotoBackGround (time);
+		#endif
+	}
+	public static void DisposeTimer(string time){
+		#if UNITY_IOS && !UNITY_EDITOR
+		_DisposeTimer (time);
+		#endif
 	}
 
 	//サスペンド

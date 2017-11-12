@@ -69,8 +69,21 @@ class Example : NSObject {
         backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
             UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
         })
+        
+        DisposeTimer("");
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Example.update), userInfo: nil, repeats: true)
+        limit = (Int)(message)!
+        print(limit)
         count = 0
+    }
+    
+    static func DisposeTimer(_ message: String){
+        //タイマー破棄
+        if(timer != nil){
+            if (timer?.isValid)! {
+                timer?.invalidate()
+            }
+        }
     }
     
     static var movingTimer = false;
@@ -86,14 +99,14 @@ class Example : NSObject {
     
     
     static var count = 0
-    
+    static var limit = 0
     
     //タイマーでアップデートで処理したい機能を書く
     static func update(){
         count+=1
         print(count)
         //5秒以上経過していたら、音楽を停止する
-        if(count > 5 && movingTimer){
+        if(count > limit && movingTimer){
             ReSetiOSBackGroundAudio();
             movingTimer = false
         }
@@ -144,17 +157,17 @@ class Example : NSObject {
         }
     }
     /*
-    override func applicationDidEnterBackground(_ application: UIApplication) {
-        super.applicationDidEnterBackground(application)
-        print("applicationDidEnterBackground!!!!!!!!!!!")
-        // サブクラス側でなんかする
-    }
-    override func applicationWillEnterForeground(_ application: UIApplication) {
-        super.applicationWillEnterForeground(application)
-        print("applicationWillEnterForeground!!!!!!!!!!!")
-        // サブクラス側でなんかする
-    }
-    */
+     override func applicationDidEnterBackground(_ application: UIApplication) {
+     super.applicationDidEnterBackground(application)
+     print("applicationDidEnterBackground!!!!!!!!!!!")
+     // サブクラス側でなんかする
+     }
+     override func applicationWillEnterForeground(_ application: UIApplication) {
+     super.applicationWillEnterForeground(application)
+     print("applicationWillEnterForeground!!!!!!!!!!!")
+     // サブクラス側でなんかする
+     }
+     */
 }
 
 

@@ -235,6 +235,8 @@ public class MainScene : BaseScene {
 		float currentMusicTime = 0;
 		mTransferOtherScreens.gameObject.SetActive (false);
 		//mMusicDisposableUpdateTrigger = new GameObject ("mMusicDisposableUpdateTrigger");
+		//ここに、ネイティブの時間をセットする関数を入れる
+		AudioSetter.SetMusicTimer(""+(int)mSetiingTimeSnapShot);
 		mMusicDisposableUpdate = this.UpdateAsObservable().Subscribe(_=>{
 			if(SoundManager.Instance.mCurrentPlayBgm.clip == null)return;
 			currentMusicTime += Time.deltaTime;
@@ -280,8 +282,9 @@ public class MainScene : BaseScene {
 		SoundManager.Instance.StopBgm ();
 		mIsPlayCharacterMusic = false;
 		UpdateMusicButtonDisPlay ();
-
 		mTransferOtherScreens.gameObject.SetActive (true);
+		//ここに、ネイティブのタイマーを破棄する処理を入れる
+		AudioSetter.DisposeTimer("");
 		//メイン画面の表示を行う
 		UpdateMainDisplay ();
 	}

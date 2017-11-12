@@ -26,6 +26,9 @@ extern "C" {
         // You can access Swift classes directly here.
         [Example ReturnBackGround:[NSString stringWithUTF8String:message]];
     }
-    
+    void _DisposeTimer(const char *message) {
+        // You can access Swift classes directly here.
+        [Example DisposeTimer:[NSString stringWithUTF8String:message]];
+    }
     
 }
