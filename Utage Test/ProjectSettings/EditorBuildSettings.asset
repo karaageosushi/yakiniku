@@ -8,4 +8,100 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyProject/Scenes/MainScene.unity
   - enabled: 1
-    path: Assets/UniSwiftExample/Main/Main.unity
+    path: Assets/Scene/MNOINE_1.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_2.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_3.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_4.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_5.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_6.unity
+  - enabled: 1
+    path: Assets/Scene/MNOINE_7.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_1.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_2.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_3.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_4.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_5.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_6.unity
+  - enabled: 1
+    path: Assets/Scene/PLIMMAVAERHA_7.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_1.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_2.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_3.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_4.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_5.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_6.unity
+  - enabled: 1
+    path: Assets/Scene/AINE_7.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_1.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_2.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_3.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_4.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_5.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_6.unity
+  - enabled: 1
+    path: Assets/Scene/CANNON_7.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_1.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_2.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_3.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_4.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_5.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_6.unity
+  - enabled: 1
+    path: Assets/Scene/HALNAUMY_7.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_1.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_2.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_3.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_4.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_5.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_6.unity
+  - enabled: 1
+    path: Assets/Scene/JEMENOPPEEDY_7.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_1.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_2.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_3.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_4.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_5.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_6.unity
+  - enabled: 1
+    path: Assets/Scene/LIEUNNE_7.unity

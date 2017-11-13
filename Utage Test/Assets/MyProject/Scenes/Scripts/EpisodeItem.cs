@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EpisodeItem : MonoBehaviour {
 
@@ -33,6 +34,14 @@ public class EpisodeItem : MonoBehaviour {
 		mButton.onClick.AddListener (()=>{
 			//通常選択時の処理を記載
 			Debug.Log("シナリオ購読画面へ繊維します！");
+			var userData = GameSystemManager.Instance.UserData;
+			userData.mCurrentSelectedADVCharacter = mCharaEpisodeData.mChara;
+			userData.mSelectedADVStoryNumber = mCharaEpisodeData.mTitleNumber;
+			//データのセーブ
+			SaveData.SaveUserData ();
+			//シーン遷移を行う
+			SceneManager.LoadScene(mCharaEpisodeData.mChara.ToString()+"_"+mCharaEpisodeData.mTitleNumber);
+
 		});
 	}
 

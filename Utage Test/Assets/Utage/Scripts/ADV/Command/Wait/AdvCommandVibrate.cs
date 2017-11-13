@@ -18,7 +18,7 @@ namespace Utage
 
 		public override void DoCommand(AdvEngine engine)
 		{
-#if UNITY_IPHONE || UNITY_ANDROID
+#if (UNITY_IPHONE || UNITY_ANDROID) && !UTAGE_IGNORE_VIBRATE
 			Handheld.Vibrate();
 #endif
 		}

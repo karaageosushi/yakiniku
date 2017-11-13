@@ -49,6 +49,7 @@
      <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\ADVManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BaseScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BonusItem.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BonusScene.cs" />
@@ -355,6 +356,8 @@
      <Compile Include="Assets\MyProject\Scenes\Scripts\uGuiNguiLikeTween\Tween\TweenText.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\uGuiNguiLikeTween\Tween\Tweener.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\uGuiNguiLikeTween\Tween\uEnum.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\UtageController.cs" />
      <Compile Include="Assets\UniSwiftExample\CallSwiftBridge.cs" />
      <Compile Include="Assets\UniSwiftExample\ExampleCallbackHandler.cs" />
      <Compile Include="Assets\UniSwiftExample\Main\Cube.cs" />

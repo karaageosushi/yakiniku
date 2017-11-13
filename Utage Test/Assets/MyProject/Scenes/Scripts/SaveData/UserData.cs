@@ -6,6 +6,10 @@ using System.Linq;
 
 [Serializable]
 public class UserData  {
+	//選択ADVキャラクター
+	public CharacterType mCurrentSelectedADVCharacter = CharacterType.NONE;
+	//選択したADVのストーリー番号
+	public int mSelectedADVStoryNumber = 0;
 	//所持キャラクター
 	public CharacterType mCurrentSelectedCharacter = CharacterType.NONE;
 	//選択キャラクターセーブデータ

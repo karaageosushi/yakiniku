@@ -1,0 +1,1740 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e889193e22a9747940ed2cfe192e6e, type: 3}
+  m_Name: Boot.chapter
+  m_EditorClassIdentifier: 
+  chapterName: 
+  dataList:
+  - {fileID: 11400000, guid: a1807ffab4bfc48f1a07e766cbf5a5a0, type: 2}
+  settingList:
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - CharacterName
+      - NameText
+      - Pattern
+      - X
+      - Y
+      - Z
+      - Pivot
+      - Scale
+      - Conditional
+      - FileName
+      - SubFileName
+      - FileType
+      - Animation
+      - RenderTexture
+      - RenderRect
+      - EyeBlink
+      - LipSynch
+      - Icon
+      - IconSubFileName
+      - IconRect
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "\u30AB\u30CE\u30F3"
+      - "\u30AB\u30CE\u30F3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 4
+      debugIndex: 4
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 5
+      debugIndex: 5
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 6
+      debugIndex: 6
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 7
+      debugIndex: 7
+      strings:
+      - "\u30AB\u30CE\u30F3\u90E8\u5C4B\u7740"
+      - "\u30AB\u30CE\u30F3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 8
+      debugIndex: 8
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 9
+      debugIndex: 9
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 10
+      debugIndex: 10
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 11
+      debugIndex: 11
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - canon_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 12
+      debugIndex: 12
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 13
+      debugIndex: 13
+      strings:
+      - "\u30CE\u30A4\u30F3"
+      - "\u30CE\u30A4\u30F3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 14
+      debugIndex: 14
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 15
+      debugIndex: 15
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 16
+      debugIndex: 16
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 17
+      debugIndex: 17
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 18
+      debugIndex: 18
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 19
+      debugIndex: 19
+      strings:
+      - "\u30CE\u30A4\u30F3\u90E8\u5C4B\u7740"
+      - "\u30CE\u30A4\u30F3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 20
+      debugIndex: 20
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 21
+      debugIndex: 21
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 22
+      debugIndex: 22
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 23
+      debugIndex: 23
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - neun_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 24
+      debugIndex: 24
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 25
+      debugIndex: 25
+      strings:
+      - "\u30A2\u30A4\u30CD"
+      - "\u30A2\u30A4\u30CD\u30FB\u30AF\u30E9\u30A4\u30CD"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 26
+      debugIndex: 26
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 27
+      debugIndex: 27
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 28
+      debugIndex: 28
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 29
+      debugIndex: 29
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 30
+      debugIndex: 30
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 31
+      debugIndex: 31
+      strings:
+      - "\u30A2\u30A4\u30CD\u90E8\u5C4B\u7740"
+      - "\u30A2\u30A4\u30CD\u30FB\u30AF\u30E9\u30A4\u30CD"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 32
+      debugIndex: 32
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 33
+      debugIndex: 33
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 34
+      debugIndex: 34
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 35
+      debugIndex: 35
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - eine_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 36
+      debugIndex: 36
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 37
+      debugIndex: 37
+      strings:
+      - "\u6625"
+      - "\u30D7\u30EA\u30DE\u30F4\u30A7\u30FC\u30E9"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 38
+      debugIndex: 38
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 39
+      debugIndex: 39
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 40
+      debugIndex: 40
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 41
+      debugIndex: 41
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 42
+      debugIndex: 42
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 43
+      debugIndex: 43
+      strings:
+      - "\u6625\u90E8\u5C4B\u7740"
+      - "\u30D7\u30EA\u30DE\u30F4\u30A7\u30FC\u30E9"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 44
+      debugIndex: 44
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 45
+      debugIndex: 45
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 46
+      debugIndex: 46
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 47
+      debugIndex: 47
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - primavera_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 48
+      debugIndex: 48
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 49
+      debugIndex: 49
+      strings:
+      - "\u30B8\u30E0\u30CE"
+      - "\u30B8\u30E0\u30CE\u30DA\u30C7\u30A3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 50
+      debugIndex: 50
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 51
+      debugIndex: 51
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 52
+      debugIndex: 52
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 53
+      debugIndex: 53
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 54
+      debugIndex: 54
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 55
+      debugIndex: 55
+      strings:
+      - "\u30B8\u30E0\u30CE\u90E8\u5C4B\u7740"
+      - "\u30B8\u30E0\u30CE\u30DA\u30C7\u30A3"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 56
+      debugIndex: 56
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 57
+      debugIndex: 57
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 58
+      debugIndex: 58
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 59
+      debugIndex: 59
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - gymnopedie_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 60
+      debugIndex: 60
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 61
+      debugIndex: 61
+      strings:
+      - "\u30EA\u30E5\u30CC"
+      - "\u30EA\u30E5\u30CC"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 62
+      debugIndex: 62
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 63
+      debugIndex: 63
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 64
+      debugIndex: 64
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 65
+      debugIndex: 65
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 66
+      debugIndex: 66
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 67
+      debugIndex: 67
+      strings:
+      - "\u30EA\u30E5\u30CC\u90E8\u5C4B\u7740"
+      - "\u30EA\u30E5\u30CC"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 68
+      debugIndex: 68
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 69
+      debugIndex: 69
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 70
+      debugIndex: 70
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 71
+      debugIndex: 71
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - lune_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 72
+      debugIndex: 72
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 73
+      debugIndex: 73
+      strings:
+      - "\u6625\u306E\u6D77"
+      - "\u30CF\u30EB\u30CE\u30A6\u30DF"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 74
+      debugIndex: 74
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 75
+      debugIndex: 75
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 76
+      debugIndex: 76
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_03
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 77
+      debugIndex: 77
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_04
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 78
+      debugIndex: 78
+      strings: []
+      isEmpty: 1
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 79
+      debugIndex: 79
+      strings:
+      - "\u6625\u306E\u6D77\u90E8\u5C4B\u7740"
+      - "\u30CF\u30EB\u30CE\u30A6\u30DF"
+      - "\u901A\u5E38"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 80
+      debugIndex: 80
+      strings:
+      - 
+      - 
+      - "\u559C"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 81
+      debugIndex: 81
+      strings:
+      - 
+      - 
+      - "\u6012"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 82
+      debugIndex: 82
+      strings:
+      - 
+      - 
+      - "\u54C0"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_13
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 83
+      debugIndex: 83
+      strings:
+      - 
+      - 
+      - Ex
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - harunoumi_14
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Character
+    type: 1
+    textLength: 1041
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - Type
+      - X
+      - Y
+      - Z
+      - Pivot
+      - Scale
+      - Conditional
+      - FileName
+      - FileType
+      - SubFileName
+      - Animation
+      - RenderTexture
+      - RenderRect
+      - Thumbnail
+      - CgCategolly
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "\u7A7A1"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg00
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - "\u7A7A2"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg01
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - "\u7A7A3"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg02
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 4
+      debugIndex: 4
+      strings:
+      - "\u6559\u4F1A1"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg10
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 5
+      debugIndex: 5
+      strings:
+      - "\u6559\u4F1A2"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg11
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 6
+      debugIndex: 6
+      strings:
+      - "\u6559\u4F1A3"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg12
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 7
+      debugIndex: 7
+      strings:
+      - "\u90E8\u5C4B1"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg20
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 8
+      debugIndex: 8
+      strings:
+      - "\u90E8\u5C4B2"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg21
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 9
+      debugIndex: 9
+      strings:
+      - "\u90E8\u5C4B3"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bg22
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 10
+      debugIndex: 10
+      strings:
+      - "\u9ED2"
+      - Bg
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - bgBlack
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Texture
+    type: 1
+    textLength: 200
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - FileName
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Particle
+    type: 1
+    textLength: 13
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - LayerName
+      - Type
+      - X
+      - Y
+      - Order
+      - LayerMask
+      - ScaleX
+      - ScaleY
+      - FlipX
+      - FlipY
+      - Width
+      - Height
+      - BorderLeft
+      - BorderRight
+      - BorderTop
+      - BorderBottom
+      - Align
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - "\u4E2D\u592E"
+      - Character
+      - 0
+      - 
+      - 200
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - "\u53F3"
+      - Character
+      - 200
+      - 
+      - 180
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - "\u5DE6"
+      - Character
+      - -200
+      - 
+      - 170
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 4
+      debugIndex: 4
+      strings:
+      - "\u5DE6\u524D"
+      - Character
+      - 
+      - 
+      - 190
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Layer
+    type: 1
+    textLength: 171
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - IntervalMin
+      - IntervalMax
+      - RandomDouble
+      - Tag
+      - Name0
+      - Duration0
+      - Name1
+      - Duration1
+      - Name2
+      - Duration2
+      - Name3
+      - Duration3
+      - Name4
+      - Duration4
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:EyeBlink
+    type: 1
+    textLength: 112
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - Type
+      - Interval
+      - Tag
+      - ScaleVoiceVolume
+      - Name0
+      - Duration0
+      - Name1
+      - Duration1
+      - Name2
+      - Duration2
+      - Name3
+      - Duration3
+      - Name4
+      - Duration4
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:LipSynch
+    type: 1
+    textLength: 106
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - '*SampleAnimation'
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - Time
+      - 0
+      - .5
+      - 1
+      - 1.5
+      - 2
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - X
+      - 0
+      - 
+      - 0
+      - 0
+      - 100
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 3
+      debugIndex: 3
+      strings:
+      - Y
+      - -50
+      - 50
+      - 0
+      - 0
+      - 0
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 4
+      debugIndex: 4
+      strings:
+      - Angle
+      - 0
+      - 
+      - 0
+      - 0
+      - 360
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 5
+      debugIndex: 5
+      strings:
+      - ScaleX
+      - .2
+      - 1.2
+      - 1
+      - 1
+      - 1
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 6
+      debugIndex: 6
+      strings:
+      - ScaleY
+      - .2
+      - 1.2
+      - 1
+      - 1
+      - 1
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 7
+      debugIndex: 7
+      strings:
+      - Alpha
+      - 0
+      - 1
+      - 1
+      - 1
+      - 1
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Animation
+    type: 1
+    textLength: 93
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - Title
+      - Type
+      - FileName
+      - IntroTime
+      - Volume
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Sound
+    type: 1
+    textLength: 37
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Label
+      - Type
+      - Value
+      - FileType
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Param
+    type: 1
+    textLength: 22
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Name
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 1
+      debugIndex: 1
+      strings:
+      - Type
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    - rowIndex: 2
+      debugIndex: 2
+      strings:
+      - FileType
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:ParamTbl{}
+    type: 1
+    textLength: 16
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - ScenarioLabel
+      - Title
+      - Thumbnail
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:SceneGallery
+    type: 1
+    textLength: 27
+    headerRow: 0
+  - rows:
+    - rowIndex: 0
+      debugIndex: 0
+      strings:
+      - Key
+      isEmpty: 0
+      isCommentOut: 0
+      debugInfo: 
+    name: Assets/Classic ADV/Classic ADV.xls:Localize
+    type: 1
+    textLength: 3
+    headerRow: 0

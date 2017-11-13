@@ -12,6 +12,6 @@ namespace Utage
 	/// </summary>
 	public class VersionUtil
 	{
-		public const string Version = "3.2.2";
+		public const string Version = "3.2.3";
 	}
 }
