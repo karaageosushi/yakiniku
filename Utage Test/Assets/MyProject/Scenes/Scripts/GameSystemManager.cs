@@ -50,7 +50,7 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 	[ContextMenu("デバッグで初期情報をセット！")]
 	public void SetEarlyUserData(){
 		var chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.AINE;
+		chara.mCharacterType = (int)CharacterType.EINE;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
@@ -58,23 +58,23 @@ public class GameSystemManager : SingletonMonoBehaviour<GameSystemManager> {
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.HALNAUMY;
+		chara.mCharacterType = (int)CharacterType.HARUNOUMI;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.JEMENOPPEEDY;
+		chara.mCharacterType = (int)CharacterType.GYMNOPEDIE;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.LIEUNNE;
+		chara.mCharacterType = (int)CharacterType.LUNE;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.MNOINE;
+		chara.mCharacterType = (int)CharacterType.NEUN;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 		chara = new CharaSaveData ();
-		chara.mCharacterType = (int)CharacterType.PLIMMAVAERHA;
+		chara.mCharacterType = (int)CharacterType.PRIMAVERA;
 		mUserData.mCharaSaveDataList.Add (chara);
 
 

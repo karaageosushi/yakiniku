@@ -54,7 +54,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_00
+      - CANNON.asset
+      - CANNON_0_0
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -70,7 +72,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_01
+      - CANNON.asset
+      - CANNON_0_1
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -86,7 +90,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_02
+      - CANNON.asset
+      - CANNON_0_2
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -102,7 +108,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_03
+      - CANNON.asset
+      - CANNON_0_3
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -118,7 +126,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_04
+      - CANNON.asset
+      - CANNON_0_4
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -140,7 +150,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_10
+      - CANNON.asset
+      - CANNON_1_0
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -156,7 +168,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_11
+      - CANNON.asset
+      - CANNON_1_1
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -172,7 +186,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_12
+      - CANNON.asset
+      - CANNON_1_2
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -188,7 +204,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_13
+      - CANNON.asset
+      - CANNON_1_3
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -204,7 +222,9 @@ MonoBehaviour:
       - 
       - 
       - 
-      - canon_14
+      - CANNON.asset
+      - CANNON_1_4
+      - Dicing
       isEmpty: 0
       isCommentOut: 0
       debugInfo: 
@@ -1242,7 +1262,7 @@ MonoBehaviour:
       debugInfo: 
     name: Assets/Classic ADV/Classic ADV.xls:Character
     type: 1
-    textLength: 1041
+    textLength: 1241
     headerRow: 0
   - rows:
     - rowIndex: 0

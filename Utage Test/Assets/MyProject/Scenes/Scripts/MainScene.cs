@@ -7,6 +7,7 @@ using SoundUtil;
 using UniRx;
 using UniRx.Triggers;
 using System;
+using Utage;
 
 public class CharaCommentFlags{
 	public bool mIsSuccessedTimer = false;
@@ -54,6 +55,11 @@ public class MainScene : BaseScene {
 	DebugScene mDebugScene;
 	[SerializeField]
 	GameObject mTransferOtherScreens;
+	[SerializeField]
+	AdvUguiMessageWindow utageMessageWindow;
+	public void DebugSetUtageMessageWindow(){
+		utageMessageWindow.Text.text = "テスト!!!!!!!!!!";
+	}
 
 	CharaCommentFlags mCharaCommentFlags =new CharaCommentFlags();
 
@@ -156,7 +162,7 @@ public class MainScene : BaseScene {
 	/// </summary>
 	public void UpdateMainDisplay(){
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
-		AudioClip selectCharaAudio = SoundManager.Instance.GetAudioClipFromIndex ((int)selectChara);
+		AudioClip selectCharaAudio = SoundUtil.SoundManager.Instance.GetAudioClipFromIndex ((int)selectChara);
 		mTimeLabel.text = new FroatToMinUtil().FroatToMin((SetiingTime));
 		mCharacterImageSelector.ShowCharactor (selectChara);
 		mCharaNameLabel.text = CharacterMasterData.CharacterDict[selectChara].mCharaName;
@@ -227,7 +233,7 @@ public class MainScene : BaseScene {
 	public void PlayCurrentSelectedCharacterMusic(){
 		mMusicSlider.enabled = false;
 		var selectChara = GameSystemManager.Instance.UserData.mCurrentSelectedCharacter;
-		SoundManager.Instance.PlayBgm ((int)selectChara);
+		SoundUtil.SoundManager.Instance.PlayBgm ((int)selectChara);
 		mIsPlayCharacterMusic = true;
 		UpdateMusicButtonDisPlay ();
 		UpdateMainDisplay ();
@@ -238,7 +244,7 @@ public class MainScene : BaseScene {
 		//ここに、ネイティブの時間をセットする関数を入れる
 		AudioSetter.SetMusicTimer(""+(int)mSetiingTimeSnapShot);
 		mMusicDisposableUpdate = this.UpdateAsObservable().Subscribe(_=>{
-			if(SoundManager.Instance.mCurrentPlayBgm.clip == null)return;
+			if(SoundUtil.SoundManager.Instance.mCurrentPlayBgm.clip == null)return;
 			currentMusicTime += Time.deltaTime;
 			var remainingTime = mSetiingTimeSnapShot-currentMusicTime;
 			mTimeLabel.text = new FroatToMinUtil().FroatToMin((remainingTime));
@@ -279,7 +285,7 @@ public class MainScene : BaseScene {
 	public void StopCurrentSelectedCharacterMusic(){
 		mMusicSlider.enabled = true;
 		mMusicDisposableUpdate.Dispose ();
-		SoundManager.Instance.StopBgm ();
+		SoundUtil.SoundManager.Instance.StopBgm ();
 		mIsPlayCharacterMusic = false;
 		UpdateMusicButtonDisPlay ();
 		mTransferOtherScreens.gameObject.SetActive (true);

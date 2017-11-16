@@ -429,9 +429,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.050239228
+    y: 0.05
     width: 1
-    height: 0.8995215
+    height: 0.9
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLoadOnAwake: 1
   isAutomaticPlay: 0
-  startScenario: 
+  startScenario: cannon1
   engine: {fileID: 456724002}
   strageType: 0
   scenarios: {fileID: 11400000, guid: d86d675cdcf7847e1a542f8caa3535b3, type: 2}
@@ -3321,9 +3321,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.050239228
+    y: 0.05
     width: 1
-    height: 0.8995215
+    height: 0.9
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
