@@ -46,6 +46,25 @@ public class TimeUtil{
 			return CommentType.MORNING;
 		}
 	}
+	public static BackGroundTimeCategory GetCurrentBackGroundTime(){
+		//ここの値は、正確に取得したいならサーバー時間にする
+		var currentTime = System.DateTime.Now;
+		//Debug.Log ("currentTime.Hour="+currentTime.Hour);
+		if (currentTime.Hour >= 6 && currentTime.Hour <= 9) {
+			return BackGroundTimeCategory.MORNING;
+		} else if (currentTime.Hour >= 10 && currentTime.Hour <= 14) {
+			return BackGroundTimeCategory.EVENING;
+		} else if (currentTime.Hour >= 15 && currentTime.Hour <= 17) {
+			return BackGroundTimeCategory.EVENING;
+		} else if (currentTime.Hour >= 18 && currentTime.Hour <= 23) {
+			return BackGroundTimeCategory.NIGHT;
+		} else if (currentTime.Hour >= 0 && currentTime.Hour <= 5) {
+			return BackGroundTimeCategory.NIGHT;
+		} else {
+			Debug.LogError ("規定外の時間です");
+			return BackGroundTimeCategory.MORNING;
+		}
+	}
 }
 
 public struct CharaCommentData{

@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BackGroundCategory{
+	SKY =0,
+	CHURCH=1,
+	ROOM = 2,
+}
+public enum BackGroundTimeCategory{
+	MORNING =0,
+	EVENING=1,
+	NIGHT = 2,
+}
+
 public struct BonusData{
 	public int mId;
 	public string mTitle;

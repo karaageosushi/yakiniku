@@ -50,6 +50,7 @@
      <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\ADVManager.cs" />
+     <Compile Include="Assets\MyProject\Scenes\Scripts\BGLoader.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BaseScene.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BonusItem.cs" />
      <Compile Include="Assets\MyProject\Scenes\Scripts\BonusScene.cs" />

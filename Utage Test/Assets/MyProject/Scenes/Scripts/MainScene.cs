@@ -56,10 +56,7 @@ public class MainScene : BaseScene {
 	[SerializeField]
 	GameObject mTransferOtherScreens;
 	[SerializeField]
-	AdvUguiMessageWindow utageMessageWindow;
-	public void DebugSetUtageMessageWindow(){
-		utageMessageWindow.Text.text = "テスト!!!!!!!!!!";
-	}
+	BGLoader mBGLoader;
 
 	CharaCommentFlags mCharaCommentFlags =new CharaCommentFlags();
 
@@ -169,6 +166,8 @@ public class MainScene : BaseScene {
 		UpDateLovePointLabel();
 		//コメント更新
 		UpdateCharaComment ();
+		//背景更新
+		mBGLoader.SetBgTexture("bg"+(int)BackGroundCategory.CHURCH+""+(int)TimeUtil.GetCurrentBackGroundTime());
 	}
 
 	/// <summary>
