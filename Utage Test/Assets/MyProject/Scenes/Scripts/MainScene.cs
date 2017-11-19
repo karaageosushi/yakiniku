@@ -46,6 +46,8 @@ public class MainScene : BaseScene {
 	[SerializeField]
 	Button mStopButton;
 	[SerializeField]
+	Button mTopStopButton;
+	[SerializeField]
 	Slider mMusicSlider;
 	[SerializeField]
 	Image mMusciValFillImage;
@@ -75,8 +77,10 @@ public class MainScene : BaseScene {
 	void UpdateMusicButtonDisPlay(){
 		mStartButton.gameObject.SetActive (false);
 		mStopButton.gameObject.SetActive (false);
+		mTopStopButton.gameObject.SetActive (false);
 		if (mIsPlayCharacterMusic) {
 			mStopButton.gameObject.SetActive (true);
+			mTopStopButton.gameObject.SetActive (true);
 		} else {
 			mStartButton.gameObject.SetActive (true);
 		}

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 352b2cf085f044e0fa5ee26fb2444601
+timeCreated: 1511009726
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 07LogoTypeGothic7
+  fontNames:
+  - 07LogoTypeGothic7
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e33efbe55b5fd42528db4ae556db39a2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
