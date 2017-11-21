@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
     //宴シーンに渡すシナリオのラベル。初期カノン１話。
     public static string LABEL = "cannon1";
 
+
     string chara = "cannon";
     string number = "1";
 

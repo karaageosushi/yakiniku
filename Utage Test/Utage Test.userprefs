@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{6D3B60AC-C458-E07E-1D9E-75AE2AB4CFBB}|" StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyProject/Scenes/Scripts/MainScene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UtageController.cs">
     <Files>
-      <File FileName="Assets/MyProject/Scenes/Scripts/BonusScene.cs" Line="7" Column="2" />
-      <File FileName="Assets/MyProject/Scenes/Scripts/MainScene.cs" Line="77" Column="14" />
-      <File FileName="Assets/MyProject/Scenes/Scripts/MasterData/CharacterMasterData.cs" Line="5" Column="1" />
-      <File FileName="Assets/Plugins/iOS/AudioSetter.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/UtageController.cs" Line="26" Column="31" />
+      <File FileName="Assets/MyProject/Scenes/Scripts/MainScene.cs" Line="83" Column="45" />
+      <File FileName="Assets/MyProject/Scenes/Scripts/BonusScene.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyProject/Scenes/Scripts/MasterData/CharacterMasterData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/iOS/AudioSetter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="10" Column="5" />
       <File FileName="Assets/MyProject/Scenes/Scripts/MasterData/GameMasterData.cs" Line="10" Column="35" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

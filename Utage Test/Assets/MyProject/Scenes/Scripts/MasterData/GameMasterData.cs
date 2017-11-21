@@ -36,4 +36,5 @@ public class GameMasterData  {
 		new BonusData(4,"ボーナスタイトル１","ボーナス獲得条件",false),
 		new BonusData(5,"ボーナスタイトル１","ボーナス獲得条件",false),
 	};
+	public const string ADV_SCENE_NAME = "Utage";
 }

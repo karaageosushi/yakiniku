@@ -10,6 +10,7 @@ public class UserData  {
 	public CharacterType mCurrentSelectedADVCharacter = CharacterType.NONE;
 	//選択したADVのストーリー番号
 	public int mSelectedADVStoryNumber = 0;
+	public string mSelectedADVScenarioName = "";
 	//所持キャラクター
 	public CharacterType mCurrentSelectedCharacter = CharacterType.NONE;
 	//選択キャラクターセーブデータ

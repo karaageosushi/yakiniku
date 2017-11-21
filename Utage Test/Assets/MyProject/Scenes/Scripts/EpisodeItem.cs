@@ -37,10 +37,11 @@ public class EpisodeItem : MonoBehaviour {
 			var userData = GameSystemManager.Instance.UserData;
 			userData.mCurrentSelectedADVCharacter = mCharaEpisodeData.mChara;
 			userData.mSelectedADVStoryNumber = mCharaEpisodeData.mTitleNumber;
+			userData.mSelectedADVScenarioName = mCharaEpisodeData.mChara.ToString().ToLower()+mCharaEpisodeData.mTitleNumber;
 			//データのセーブ
 			SaveData.SaveUserData ();
 			//シーン遷移を行う
-			SceneManager.LoadScene(mCharaEpisodeData.mChara.ToString()+"_"+mCharaEpisodeData.mTitleNumber);
+			SceneManager.LoadScene(GameMasterData.ADV_SCENE_NAME);
 
 		});
 	}
